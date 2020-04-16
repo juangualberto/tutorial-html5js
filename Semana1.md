@@ -2,11 +2,26 @@
 
 ## ¿Cómo funciona Internet?
 
+Cuando queremos visitar una página Web normalmente nos vamos a nuestro buscador favorito y hacemos la consulta. Pero si nos fijamos en la barra de direcciones, cuando estamos en esa Web, ahí hay escrito lo que llamamos un **identificador uniforme de recurso o URL** (Uniform Resource Locator), es decir una dirección que nos permite acceder de forma inequívoca a un recurso de un determinado servidor.
 
+El formato general de un URL es: **protocolo://máquina.directorio.archivo** aunque también pueden añadirse otros datos: **protocolo://usuario:contraseña@máquina:puerto.directorio.archivo**.
 
-## Lenguajes de Marcas
+Por ejemplo: [https://es.wikipedia.org/wiki/Localizador_de_recursos_uniforme](https://es.wikipedia.org/wiki/Localizador_de_recursos_uniforme):
+
+* **https** es el protocolo
+* **es** es el servidor para España de Wikipedia
+* **wikipedia.org**  es el dominio donde está la página
+* **/wiki/Localizador_de_recursos_uniforme** es el archivo que estamos consultando
+
+[![¿Qué ocurre cuando introducimos una URL en un navegador?](./docs/comofuncionainternet.png)](https://www.youtube.com/watch?v=Lec6zX1tdak)
+
+Normalmente confundimos Internet con la World Wide Web ó WWW. [Como podemos leer en Wikipedia](https://es.wikipedia.org/wiki/World_Wide_Web), el World Wide Web (WWW) o red informática mundial​ es un sistema de distribución de documentos de hipertexto o hipermedia interconectados y accesibles a través de Internet. Con un navegador web, un usuario visualiza sitios web compuestos de páginas web que pueden contener textos, imágenes, vídeos u otros contenidos multimedia, y navega a través de esas páginas usando hiperenlaces.
+
+## Lenguajes de marcas
 
 HTML es un [lenguaje de marcas](https://es.wikipedia.org/wiki/Lenguaje_de_marcado), es decir, que usamos unas etiquetas predefinidas para dar estructura o significado al texto de la página.
+
+En un PC sabemos que un archivo es de este tipo porque **normalmente usa la extensión html o html**.
 
 Ejemplos:
 
@@ -83,6 +98,50 @@ En el anterior ejemplo tenemos que:
 
 ![Esquema general de una página Web.](./docs/general_layout.gif "Estructura general de una página")
 
+### Títulos y párrafos
+
+El lenguaje HTML es muy cuidadoso con la organización de la información, por lo que lo primero que debemos conocer es cómo estructurar los títulos y cómo definir los párrafos de texto.
+
+#### Párrafos
+
+Las etiquetas \<p> y \</p> se emplean para definir un bloque de texto que se comporta como un párrafo. Normalmente no dejaremos nunca una porción de texto suelta por la página web, sino que la rodearemos con esas etiquetas. El editor de texto se encargará de hacerlo por nosotros pero, si estamos usando otro tipo de editor, debemos asegurarnos de qué sucede.
+
+#### Títulos
+
+Las etiquetas \<h1> y \</h1> se utilizan para definir un texto como título, indicando que es una cabecera (la h viene de header, cabecera en inglés) que queremos destacar sobre el resto del texto. Junto a \<h1> contamos con \<h2>, \<h3> y así hasta \<h6> para definir diferentes títulos, de mayor a menor importancia.
+
+Una página web bien diseñada contará con estos encabezados para definir los distintos apartados del texto, con sus diferentes niveles. En la figura se puede observar cómo hemos incorporado algunos encabezados, en este caso h1 y h2, a nuestro texto. Se consigue añadiendo el texto y a continuación seleccionando el encabezado deseado en cuadro de la parte izquierda.
+
+Cada uno de los niveles de encabezado tiene una apariencia diferente de tamaño y tipo de letra. Este aspecto se puede modificar como veremos un poco más tarde.
+Saltos de línea y líneas separadoras
+
+Para complementar las opciones de separación del texto, contamos con dos etiquetas más:
+
+* \<br> inserta un salto de línea en el texto. No genera un nuevo párrafo, sino que parte la línea en dos. Es un elemento puntual, que no lleva etiqueta de cierre.
+* \<hr> inserta un salto de línea en el texto, pero mostrando una línea horizontal visible.
+
+### Hiperenlaces o anclas
+
+El elemento ancla o hiperenlace \<a> crea un enlace a otras páginas de internet, archivos o incluso partes dentro de la misma página, direcciones de correo, o cualquier otra URL:
+
+```html
+<a href="https://www.youtube.com/juanguedu">Mi canal de Youtube</a>
+```
+
+### Imágenes
+
+la etiqueta \<img> se emplea para insertar una imagen en la página web, pero por si sola no funciona correctamente. Necesita que le incorporemos un parámetro en el que indiquemos qué imagen será la que se muestre. Quedaría así:
+
+```html
+<img src=”mi_foto.jpg”>
+```
+
+En el ejemplo siguiente, además de indicar qué imagen se mostrará, establecemos el tamaño que ocupará en la pantalla:
+
+```html
+<img src="mi_foto.jpg” width=”300px” height=”150px”>
+```
+
 ### Uso de audio y video en HTML5
 
 Los elementos [\<audio>](https://developer.mozilla.org/es/docs/Web/HTML/Elemento/audio) y [\<video>](https://developer.mozilla.org/es/docs/Web/HTML/Elemento/video) permiten la manipulacion de nuevo contenido multimedia.
@@ -99,8 +158,49 @@ Si nuestro navegador es moderno, veremos el vídeo, en caso contrario veríamos 
 
 ### Formularios en HTML5
 
-[Mejora de los formularios web en HTML5](https://developer.mozilla.org/es/docs/HTML/HTML5/Formularios_en_HTML5): La API de validación de restricción, varios atributos nuevos, nuevos valores para \<input> como el atributo type y el nuevo elemento \<output>.
+Cuando abres un navegador y vas a la página de tu buscador favorito, **eso es un formulario**, fíjate cómo hay una caja donde escribes el texto a buscar y luego un botón para enviar que pulsaremos para ir a la siguiente página con los resultados de la búsqueda.
+
+Aquí tienes un ejemplo de formulario. Fíjate en la etiqueta \<input>. Verás que según el tipo de información que quieres consultar, es el atributo **type** de cada entrada de texto:
+
+```html
+<p>Esto es un típico formulario Web</p>
+<form action="getform.php" method="get">
+    <label>Nombre: <input type="text"></label><br>
+    <label>Apellido: <input type="text"></label><br>
+    <label>E-mail: <input type="email"></label><br>
+    <label>Edad: <input type="number" min="18" max="120"><br>
+    <input type="submit" value="Submit">
+</form>
+```
+
+Esto dará lugar a un formulario como éste:
+
+![Formulario información personal](./docs/formularioSimple.png)
+
+Además el trabajar con HTML5 nos ofrece otra ventaja como es [aprovechar su mejora de los formularios web](https://developer.mozilla.org/es/docs/HTML/HTML5/Formularios_en_HTML5): Validación de restricción (p.ej. si un campo es un número, podemos indicar entre qué números deberá estar comprendido), varios atributos nuevos, nuevos valores para \<input> como el atributo type y el nuevo elemento \<output>.
+
+Observa cómo funciona esto de las restricciones en el ejemplo anterior cuando intentamos introducir una letra en la edad:
+
+![Formulario Restricción Edad](./docs/formularioSimpleRestriccion.png)
 
 ## Plantilla de una página Web con hiperenlaces
 
-Ahora que hemos aprendido qué es eso del HMTL te proponemos el siguiente ejercicio: Vamos a crear una Web 
+Ahora que ya tenemos una ligera noción de qué es eso del HMTL te proponemos el siguiente ejercicio: Vamos a crear una Web a partir del ejemplo de estructura básica. La página debe tener un título, un autor y al menos un hiperenlace. Recuerda guardar el archivo con la extensión html ("ejemplo.html").
+
+### Editores de texto
+
+Si no puedes localizar en el equipo un editor de texto plano con el que poder hacer las prácticas y tareas del proyecto, puedes instalar uno de los siguientes:
+
+* [Microsoft Visual Studio Code](https://code.visualstudio.com/download) (si no lo quieres instalar también hay [opción de usarlo en modo "portable"](https://code.visualstudio.com/docs/editor/portable))
+* [Geany](https://www.geany.org/download/releases/)
+* [Notepad++](https://notepad-plus-plus.org/downloads/)
+
+En los vídeos y en clase tenemos Visual Studio Code, luego ante duda te recomendamos ése.
+
+En Windows, el más ligero y fácil de usar es Notepad++.
+
+En Linux, el más sencillo es Geany.
+
+Si no quieres instalar nada, puedes [trabajar on-line con alguna Web como CodePen](https://codepen.io/pen/).
+
+¿Qué tal, has podido crear tu primera página Web, ha sido fácil?

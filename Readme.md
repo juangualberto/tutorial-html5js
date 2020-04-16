@@ -24,3 +24,9 @@ Para cada entrega (semana) vamos creando una rama nueva, de tal manera que si qu
 7. [Semana 7: JavaScript - Pensamiento computacional. Algoritmos.](./Semana7.md)
    + Ejercicio: La letra del DNI.
 8. [Semana 8: JavaScript - Almacenando datos.](./Semana8.md)
+
+## Objetivo
+
+Al terminar el curso, habrás aprendido cómo funciona HTML5, CSS3 y algo de JavaScript y habrás generado un juego como éste:
+
+<img src="./docs/Screenshot_buscaminas01.png" height="532px" width="300px" alt="Buscaminas jugando" > <img src="./docs/Screenshot_buscaminas02.png" height="532px" width="300px" alt="Buscaminas perdedor" >
