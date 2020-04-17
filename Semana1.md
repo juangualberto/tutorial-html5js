@@ -98,9 +98,13 @@ En el anterior ejemplo tenemos que:
 
 ![Esquema general de una página Web.](./docs/general_layout.gif "Estructura general de una página")
 
+Los elementos en HTML usualmente son bien elementos "en línea" o bien elementos a "nivel de bloque". Un elemento en línea ocupa sólo el espacio acotado por las etiquetas que lo definen. Un elemento en bloque pueden ser varias líneas.
+
 ### Títulos y párrafos
 
-El lenguaje HTML es muy cuidadoso con la organización de la información, por lo que lo primero que debemos conocer es cómo estructurar los títulos y cómo definir los párrafos de texto.
+El lenguaje HTML es muy cuidadoso con la organización de la información, por lo que lo primero que debemos conocer es cómo estructurar los títulos y cómo definir los párrafos de texto. Esto serían elementos de bloque.
+
+Para dar formato a una palabra o conjunto de palabras (negrita, cursiva, subrayado, tachado...) usamos etiquetas que definen elementos "en línea".
 
 #### Párrafos
 
@@ -119,6 +123,35 @@ Para complementar las opciones de separación del texto, contamos con dos etique
 
 * \<br> inserta un salto de línea en el texto. No genera un nuevo párrafo, sino que parte la línea en dos. Es un elemento puntual, que no lleva etiqueta de cierre.
 * \<hr> inserta un salto de línea en el texto, pero mostrando una línea horizontal visible.
+
+#### Formato de palabras
+
+Aunque existen etiquetas para poner el texto en negrita: \<strong> o \<b>, cursiva \<i>, etc. hoy día ya están obsoletas en HTML5. Ahora deberíamos cercar con \<span>\</span> (de *abarcar* en inglés) el texto que queremos decorar y darle formato con CSS.
+
+Ejemplos:
+
+```html
+   <p>
+    Esto es un párrafo con el siguiente texto en rojo
+     <span style="color: red;"> y esto un span dentro de un párrafo. </span>
+   </p>
+   <p>
+    Y esto otro párrafo con el siguiente texto en negrita
+    <span style="font-weight: bold;"> y esto un span dentro de un párrafo. </span>
+   </p>
+   <p>
+    Y esto otro párrafo con el siguiente texto en cursiva
+    <span style="font-style: italic;"> y esto un span dentro de un párrafo. </span>
+   </p>
+   <p>
+    Y esto otro párrafo con el siguiente texto en negrita
+    <span style="text-decoration:underline;"> y esto un span dentro de un párrafo. </span>
+   </p>
+```
+
+Esto da lugar en un navegador a la siguiente salida:
+
+![uso de span](docs/span.png)
 
 ### Hiperenlaces o anclas
 
