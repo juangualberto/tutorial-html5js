@@ -4,6 +4,8 @@
 
 Este curso ha sido realizado para ayudar a nuestros alumnos durante los meses de confinamiento por la pandemia del COVID-19. Primavera del 2020.
 
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional</a>.
+
 Para seguir el curso te animamos a visitar el [canal de Youtube del autor](https://www.youtube.com/user/juanguedu) además de seguir estas explicaciones.
 
 ## Cómo usar el curso
@@ -15,15 +17,19 @@ Para cada entrega (semana) vamos creando una rama nueva, de tal manera que si qu
 1. [Semana 1: HTML5 - Sintaxis básica y tablas.](./Semana1.md)
    + Ejercicio: Plantilla de una página Web con hiperenlaces.
 2. [Semana 2: HTML5 - El modelo de cajas.](./Semana2.md)
+   + Ejercicio: Esqueleto de una página Web.
 3. [Semana 3: CSS3 - Con un poco de estilo. Menús.](./Semana3.md)
    + Ejercicio horario de clase.
 4. [Semana 4: JavaScript - ¡Hola Mundo!](./Semana4.md)
+   + Ejercicio: mostrar por consola las tablas de multiplicar.
 5. [Semana 5: JavaScript - Variables, clases, métodos y funciones.](./Semana5.md)
    + Ejercicio: Adivina en qué número pienso.
 6. [Semana 6: JavaScript - El árbol DOM.](./Semana6.md)
+   + Ejercicio: Modificar el contenido de nuestra página al pulsar botón.
 7. [Semana 7: JavaScript - Pensamiento computacional. Algoritmos.](./Semana7.md)
    + Ejercicio: La letra del DNI.
 8. [Semana 8: JavaScript - Almacenando datos.](./Semana8.md)
+   + Ejercicio: Guardando información en LocalStorage.
 
 ## Objetivo
 

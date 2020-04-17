@@ -65,7 +65,7 @@ Sea el siguiente ejemplo adaptación de los [tutoriales de Mozilla](https://deve
 
         </nav>
         <section>
-            <h1>El fiero conejo</h1> 
+            <h1>El fiero conejo</h1>
         <section>
             <h1>Introducción</h1>
             <p>En esta sección presentamos al conocido mamífero.
