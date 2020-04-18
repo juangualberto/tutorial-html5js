@@ -46,7 +46,9 @@ Ejemplos:
 </html>
 ```
 
-## Las nuevas etiquetas de HTML5
+## Etiquetas más comunes de HTML
+
+### Las nuevas etiquetas de HTML5
 
 Como decíamos con anterioridad, HTML5 plantea un [nuevo esquema y secciones de un documento](https://developer.mozilla.org/es/docs/Sections_and_Outlines_of_an_HTML5_document): \<section>, \<article>, \<nav>, \<header>, \<footer>, \<aside>.
 
@@ -124,7 +126,7 @@ Para complementar las opciones de separación del texto, contamos con dos etique
 * \<br> inserta un salto de línea en el texto. No genera un nuevo párrafo, sino que parte la línea en dos. Es un elemento puntual, que no lleva etiqueta de cierre.
 * \<hr> inserta un salto de línea en el texto, pero mostrando una línea horizontal visible.
 
-#### Formato de palabras
+### Formato de palabras
 
 Aunque existen etiquetas para poner el texto en negrita: \<strong> o \<b>, cursiva \<i>, etc. hoy día ya están obsoletas en HTML5. Ahora deberíamos cercar con \<span>\</span> (de *abarcar* en inglés) el texto que queremos decorar y darle formato con CSS.
 
@@ -215,6 +217,42 @@ Además el trabajar con HTML5 nos ofrece otra ventaja como es [aprovechar su mej
 Observa cómo funciona esto de las restricciones en el ejemplo anterior cuando intentamos introducir una letra en la edad:
 
 ![Formulario Restricción Edad](./docs/formularioSimpleRestriccion.png)
+
+### Listas
+
+Para declarar listas usamos o bien la etiqueta \<ol>\</ol> (*del inglés ordered list*) si queremos una lista numerada u **ordenada** o bien la etiqueta \<ul>\</ul>, si queremos una lista desordenada (del inglés *unordered list*).
+
+El elemento \<li>\</li> del inglés **list item** o elemento de lista, declara cada uno de los elementos de una lista.
+
+Ejemplo:
+
+```html
+<ul>
+ <li>primer elemento</li>
+ <li>segundo elemento</li>
+ <li>tercer elemento</li>
+</ul>
+```
+
+dará como salida:
+
+![Lista ordenada](./docs/ul.png)
+
+Sin embargo, el siguiente ejemplo:
+
+```html
+<ol>
+ <li>primer elemento</li>
+ <li>segundo elemento</li>
+ <li>tercer elemento</li>
+</ol>
+```
+
+dará como salida:
+
+![Lista ordenada](./docs/ol.png)
+
+¿Has visto la diferencia entre usar \<ol> y \<ul>?
 
 ## Plantilla de una página Web con hiperenlaces
 

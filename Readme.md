@@ -8,6 +8,8 @@ Este curso ha sido realizado para ayudar a nuestros alumnos durante los meses de
 
 Para seguir el curso te animamos a visitar el [canal de Youtube del autor](https://www.youtube.com/user/juanguedu) además de seguir estas explicaciones.
 
+Si estás viendo una copia en formato PDF o ePub del libro, recuerda que siempre puedes acceder a la [última versión en el repositorio de Github](https://github.com/juangualberto/tutorial-html5js).
+
 ## Cómo usar el curso
 
 Para cada entrega (semana) vamos creando una rama nueva, de tal manera que si quieres seguir el proyecto viendo los vídeos, sólo necesitarás cambiar a la rama de la semana del vídeo.
