@@ -254,6 +254,23 @@ dará como salida:
 
 ¿Has visto la diferencia entre usar \<ol> y \<ul>?
 
+### La etiqueta \<div>
+
+En un documento HTML el elemento \<div> (del inglés division) permite crear divisiones, también llamadas secciones o zonas. Las divisiones se utilizan para agrupar elementos y aplicarles estilos. Es el contenedor genérico para dar diseño al contenido. Ejemplo:
+
+```html
+<div class="container">
+  <div class="well">One</div>
+  <div class="well">Two</div>
+  <div class="well">Three</div>
+  <div class="well">Four</div>
+  <div class="well">Five</div>
+  <div class="well">Six</div>
+</div>
+```
+
+*Recuerda* este elemento porque vamos a usarlo muchas veces.
+
 ## Plantilla de una página Web con hiperenlaces
 
 Ahora que ya tenemos una ligera noción de qué es eso del HMTL te proponemos el siguiente ejercicio: Vamos a crear una Web a partir del ejemplo de estructura básica. La página debe tener un título, un autor y al menos un hiperenlace. Recuerda guardar el archivo con la extensión html ("ejemplo.html").

@@ -38,3 +38,7 @@ Para cada entrega (semana) vamos creando una rama nueva, de tal manera que si qu
 Al terminar el curso, habrás aprendido cómo funciona HTML5, CSS3 y algo de JavaScript y habrás generado un juego como éste:
 
 <img src="./docs/Screenshot_buscaminas01.png" height="532px" width="300px" alt="Buscaminas jugando" > <img src="./docs/Screenshot_buscaminas02.png" height="532px" width="300px" alt="Buscaminas perdedor" >
+
+## Presentación del curso
+
+[![Presentación del curso](http://img.youtube.com/vi/Tdn_sXVzXtA/0.jpg)](http://www.youtube.com/watch?v=Tdn_sXVzXtA)

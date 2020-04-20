@@ -21,9 +21,37 @@ Un ejemplo de organización podría ser éste (muy importante, intenta **siempre
 
 ![Estructura de archivos](./docs/estructuraArchivos.png)
 
-## La etiqueta \<div>
+## Cómo añadir CSS a una Web
 
-Cada elemento HTML que podemos encontrar en una página web se encuentra rodeado de una caja con varias propiedades que pueden ser modificadas. Es lo que llamamos el modelo de cajas.
+Aún no hemos explicado qué son ni para qué sirven las hojas de estilo (lo veremos en el siguiente apartado) pero antes sí queremos mostrarte cómo tenemos que añadir esos "estilos" a la página Web.
+
+### Añadiendo estilos en la misma etiqueta
+
+Podemos aplicar estilos dentro de un elemento concreto de la página web, mediante el atributo **style** que se puede establecer para cualquier etiqueta. Veamos un par de ejemplos:
+
+```html
+<h1>Qué entendemos por un <span style="color: rgb(0, 153, 0);">párrafo</span></h1>
+<p style="font-style: italic; color: rgb(20, 20, 200);">Un párrafo de texto se compone de un bloque de texto independiente con una apariencia concreta, delimitado por un espacio superior y otro inferior.</p>
+```
+
+### Añadiendo estilos en la cabacera de la página
+
+En la cabecera (dentro del elemento  \<head>\</head>) podemos indicar las reglas CSS que necesitemos, afectando de este modo sólo a la página web en cuestión.
+
+### Añadiendo estilos desde un archivo externo
+
+## El modelo de cajas
+
+Como ya te explicamos el contenido de una página Web lo vamos guardando entre etiquetas. Estas etiquetas contienen el texto, es decir con contenedores o cajas de texto. Para dar el aspecto que tienen a las páginas Web (y que no sean sólamente texto), les damos estilos, es lo que se llama CSS (Cascade Style Sheets - hojas de estilo en cascada).
+
+En general, hay dos tipos de cajas (o contenedores): cajas en bloque y cajas en línea. Estas características se refieren al modo como se comporta la caja en términos de flujo de página y en relación con otras cajas de la página:
+
+Si una caja se define como un bloque, se comportará de las maneras siguientes:
+
+* La caja se extenderá en la dirección de la línea para llenar todo el espacio disponible que haya en su contenedor. En la mayoría de los casos, esto significa que la caja será tan ancha como su contenedor, y llenará todo el ancho espacio disponible
+* La caja provoca un salto de línea al llegar al final de la línea
+* Tiene un ancho y algo (propiedades width y height)
+* El área de relleno, el margen y el borde mantienen a los otros elementos alejados de la caja
 
 ![modelo de cajas](docs/cajas.jpg)
 
@@ -39,8 +67,8 @@ Los valores width y height se acompañan de un valor numérico exacto o de un po
 
 ```css
 body {
-principal { width: 400px;
-background-color: rgb(0, 126, 0);
+    principal { width: 400px;
+    background-color: rgb(0, 126, 0);
 }
 ```
 
@@ -49,27 +77,26 @@ background-color: rgb(0, 126, 0);
 Comenzaremos con la imagen. Con tan sólo modificar su margen, observaremos cómo se distancia del resto de los elementos. Usaremos la propiedad margin seguida de un valor numérico o de un porcentaje:
 
 ```css
-img { margin: 20px; }
+    img { margin: 20px; }
 ```
 
-### Relleno
+### Relleno
 
 Probaremos ahora a modificar su relleno, es decir, la distancia imaginaria entre un hipotético borde y la imagen propiamente dicha. Para ello emplearemos la propiedad padding, exactamente igual que hicimos con la anterior. Probemos con un valor menos exagerado:
 
 ```css
-img { padding: 5px; }
+    img { padding: 5px; }
 ```
 
 ### Borde
 
 Si recargamos la página con esta incorporación, observaremos que, en efecto, la imagen se separa un poco más, esos 5 píxeles por cada lado, pero no es posible distinguir dónde acaba el efecto del margen y comienza el del relleno. Para poder diferenciar los valores, deberíamos tener un borde en la imagen.
 
-
 ```css
 img {
-border-width: 2px;
-border-style: solid;
-border-color: #007000;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #007000;
 }
 ```
 
@@ -81,18 +108,17 @@ Tanto margin, como padding y border se pueden emplear para modificar laterales d
 
 En la figura hemos aplicado estas propiedades para el título de la página:
 
-
 ```css
 h1 {
-margin-top:40px;
-padding-left: 5px;
-padding-right:5px;
-border-top-width: 2px;
-border-top-style: dotted;
-border-top-color: #007000;
-border-bottom-width: 2px;
-border-bottom-style: double;
-border-bottom-color: #007000;
+    margin-top:40px;
+    padding-left: 5px;
+    padding-right:5px;
+    border-top-width: 2px;
+    border-top-style: dotted;
+    border-top-color: #007000;
+    border-bottom-width: 2px;
+    border-bottom-style: double;
+    border-bottom-color: #007000;
 }
 ```
 
@@ -109,15 +135,15 @@ groove: tipo de relieve.
 ridge: tipo de relieve.
 inset: tipo de relieve.
 outset: tipo de relieve.
-none: empleado para indicar que no habrá borde
+none: empleado para indicar que no habrá borde.
 ```
 
-Es cuestión de probar algunos modelos. El valor solid es la línea sencilla, la más empleada.
+El valor solid es la línea sencilla y la más empleada.
 
 Como ya sucedía con otras propiedades, podemos reagrupar los valores referidos a los bordes en una sola propiedad genérica denominada border. Para ello estableceremos los valores separados por espacios y en el orden de tamaño, estilo y color, como en este ejemplo que haría la misma función que el recuadro anterior:
 
 ```css
-img { border: 2px solid #007000;}
+    img { border: 2px solid #007000;}
 ```
 
 ### Esquinas redondeadas
@@ -128,8 +154,8 @@ La propiedad que lo permite es border-radius, acompañada de un valor numérico.
 
 ```css
 img {
-border: 2px solid #007000;
-border-radius:25px;
+    border: 2px solid #007000;
+    border-radius:25px;
 }
 ```
 
@@ -137,7 +163,11 @@ border-radius:25px;
 
 Las modernas hojas de estilo proporcionan a cualquier elemento la capacidad de proyectar una sombra. Ya vimos que esto funcionaba con el texto, pero además contamos con la propiedad box-shadow para crear sombras en cualquier caja de nuestra página web, lo que hace que sea posible aplicarselo a cualquier elemento.
 
-table {box-shadow: 8px 8px 6px #aaaaaa; }
+```css
+table {
+    box-shadow: 8px 8px 6px #aaaaaa; 
+}
+```
 
 Los valores que conforman la sombra son similares a los que vimos para las sombras de texto, es decir, desplazamiento horizontal, vertical, difuminado y color de sombra.
 
@@ -148,7 +178,9 @@ Los elementos de una página web pueden reubicarse a la izquierda o a la derecha
 En el siguiente ejemplo la regla:
 
 ```css
-img { float:left;}
+img {
+    float:left;
+}
 ```
 
 provoca que el texto se sitúe alrededor de la imagen.
