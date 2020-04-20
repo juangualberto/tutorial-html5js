@@ -34,9 +34,39 @@ Podemos aplicar estilos dentro de un elemento concreto de la página web, median
 <p style="font-style: italic; color: rgb(20, 20, 200);">Un párrafo de texto se compone de un bloque de texto independiente con una apariencia concreta, delimitado por un espacio superior y otro inferior.</p>
 ```
 
+Esto se vería parecido a la siguiente imagen en un navegador:
+
+![Estilos en elementos](./docs/estiloenetiqueta.png)
+
 ### Añadiendo estilos en la cabacera de la página
 
 En la cabecera (dentro del elemento  \<head>\</head>) podemos indicar las reglas CSS que necesitemos, afectando de este modo sólo a la página web en cuestión.
+
+Imagina que, queremos que todos los párrafos (etiqueta \<p>\</p>) de mi página Web y el h1 (*importante*: sólo debe haber un \<h1>\</h1> en cada página)
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        h1   {
+            color: rgb(0, 153, 0);}
+        p    {
+            font-style: italic; 
+            color: rgb(20, 20, 200);
+        }
+        </style>
+    </head>
+    <body>
+        <h1>¿Qué entendemos por un párrafo?</h1>
+        <p>Un párrafo de texto se compone de un          bloque de texto independiente con una apariencia concreta, delimitado por un espacio superior y otro inferior.</p>
+    </body>
+</html>
+```
+
+Esto se vería un poco diferente al ejemplo anterior en un navegador (intenta pensar porqué no es exactamente igual):
+
+![Estilos en elementos](./docs/estilosencabecera.png)
 
 ### Añadiendo estilos desde un archivo externo
 
@@ -165,7 +195,7 @@ Las modernas hojas de estilo proporcionan a cualquier elemento la capacidad de p
 
 ```css
 table {
-    box-shadow: 8px 8px 6px #aaaaaa; 
+    box-shadow: 8px 8px 6px #aaaaaa;
 }
 ```
 
@@ -185,9 +215,90 @@ img {
 
 provoca que el texto se sitúe alrededor de la imagen.
 
+## Tablas con estilo
+
+### Tablas en HTML
+
+Cuando manejamos información, es interesante representarla en diferentes formatos. Seguro que recuerdas lo que es una hoja de cálculo. Si tienes instalado un programa de hoja de cálculo, ábrelo y recuerda cómo teníamos filas y columnas. 
+
+Ahora compara el contenido de la siguiente tabla HTML (busca lo que hay dentro de  \<table> y \</table> en este ejemplo) con las siguientes imágenes (fíjate como le digo que haga una fila con las etiqueta \<tr> y una celda con la etiqueta \<td>):
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de tabla</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+          }
+        th {
+            color:white;
+            background-color:black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>a1</td><td>b1</td><td>c1</td><td>d1</td><td>e1</td>
+            </tr>
+            <tr>
+                <td>a2</td><td>b2</td><td>c2</td><td>d2</td><td>e2</td>
+            </tr>
+            <tr>
+                <td>a3</td><td>b3</td><td>c3</td><td>d3</td><td>e3</td>
+            </tr>
+            <tr>
+                <td>a4</td><td>b4</td><td>c4</td><td>d4</td><td>e4</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+```
+
+En una hoja de cálculo la tabla sería:
+
+![Una tabla en una hoja de cálculo](docs/libreofficecalc.png)
+
+En el navegador la tabla se vería como:
+
+![Ejemplo de tabla](docs/tabla.png)
+
+Fíjate también cómo en la cabecera de la página (etiqueta \<head>) hemos añadido un elemento \<style> con este contenido:
+
+```css
+table, th, td {
+    border: 1px solid black;
+}
+th {
+    color:white;
+    background-color:black;
+}
+```
+
+En estas líneas, mediante CSS le indicamos al navegador que queremos bordes alrededor de la tabla, de los \<th> y \<td> y que los \<th> además tendrán la letra blanca con el fondo negro.
+
 ## Ejercicio semana 2
 
 Deberás crear todas las carpetas necesarias para ir haciendo la Web (css, js, img, snd...).
+
+Dentro de la carpeta CSS crea un archivo estilos.css con el mismo contenido del ejemplo de las tablas.
+
+Detro de la carpeta JS crea un archivo index.js con el siguiente contenido:
+
+```javascript
+console.log("Hola Mundo");
+```
 
 Hay que crear el fichero index.html con el siguiente contenido:
 
