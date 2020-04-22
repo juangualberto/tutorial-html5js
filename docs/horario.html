@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Juan Gualberto" />
+		<style>
+			body {
+				background: url("img/fondo.png") #004024;	
+				background-repeat: no-repeat;
+				opacity: 0.6;		
+				background-attachment: fixed;
+				background-size: 100%;
+				color: white;
+			}
+			.tabla {
+				/* -ms-transform: rotate(15deg); // IE 9 
+			    -webkit-transform: rotate(15deg); // Chrome, Safari, Opera 
+			    transform: rotate(15deg);*/		
+			   /* transform: scale(0.75 , 0.75) skew(30deg);*/
+			   position :relative;
+			   animation: mymove 5s infinite;
+			}
+			@keyframes mymove {
+			    0%  {transform: perspective( 500px ) rotateY( 0deg ) }
+			    25%  {transform: perspective( 500px ) rotateY( 90deg ) }
+			    50%  {transform: perspective( 500px ) rotateY( 180deg ) }
+			    75%  {transform: perspective( 500px ) rotateY( 270deg )}
+			    100% {transform:perspective( 500px ) rotateY( 360deg )}
+			}			
+						
+			table{
+				border:2px solid green;	
+				box-shadow:10px 10px 5px #448844;
+			}
+			table:hover{
+				box-shadow:20px 20px 15px #FF0000;
+			}
+			th{
+				text-align:center; 
+				text-transform: capitalize;
+				background-color: green;
+				color: white;
+				font-family: sans-serif;
+				}
+			td{	
+				text-align:center;
+				font-family: Helvetica;
+			}
+			h1 {
+				color: green;
+				text-shadow: 3px 3px #88AA88;			
+			}
+			
+			.caja_principal {
+				margin: 20px;
+				padding: 20px;
+				border: solid black;
+				border-radius: 15px;
+				background: linear-gradient(left,green,white);
+				background: -moz-linear-gradient(left, black, darkgreen);				 
+				box-shadow: 10px 10px 10px #AAAAAA;							
+			}
+
+			ol {
+				list-style-type: cjk-ideographic;				
+			}
+			li {
+				display: inline;
+			}
+		</style>		
+		<title></title>
+	<!--	<meta http-equiv="Refresh" content="10" /> -->
+	</head>
+	
+	<body>
+	<div class="caja_principal">
+		<h1>Horario de 2º Bachillerato Z</h1>
+			<table class="tabla">
+				<tr>
+				<td></td>
+				<th>lunes</th>
+				<th>martes</th>
+				<th>miércoles</th>
+				<th>jueves</th>
+				<th>viernes</th>
+				</tr>
+				<tr>
+					<th>1</th>
+					<td>Matemáticas</td>
+					<td>Literatura</td>
+					<td>TIC 2</td>
+					<td>Física</td>
+					<td>Inglés</td>
+				</tr>
+				<tr>
+					<th>2</th>
+					<td>Lengua</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>3</th>
+					<td>TIC 2</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>4</th>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+			<br/>
+			<p>
+				<script type="text/javascript">
+					date = new Date();
+					document.write(date);
+				</script>
+			</p>
+	</div>
+
+	<div class="caja_principal">
+			<h2> Lorem Ipsum </h2>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut leo vitae metus fringilla suscipit et nec arcu. Morbi ligula augue, pretium id tristique ac, aliquam ac velit. Praesent sed lorem ac libero condimentum varius a non orci. Proin maximus ipsum et metus tempor, at ultrices nisi laoreet. Aliquam non molestie orci, eget posuere ex. Curabitur accumsan lacus ante, sit amet consequat nisi hendrerit non. Nulla in dui pulvinar, ornare mi sit amet, pharetra erat. Donec eu libero et enim laoreet feugiat.
+</p>
+<p>
+Vestibulum in augue dapibus, facilisis dolor a, ultricies elit. Cras vitae urna eget dui posuere vulputate a sit amet felis. Sed maximus enim vitae fermentum tristique. Nulla dapibus vitae justo id semper. Donec id nibh ullamcorper, condimentum velit sagittis, accumsan diam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas mollis, massa ut vehicula pulvinar, nisl elit vehicula est, ut congue turpis sem in nisi. Aliquam nec ultrices sem, at laoreet nisi. Quisque sem nunc, scelerisque non bibendum a, egestas sed libero. Integer vestibulum sem at lacus luctus convallis.
+</p> 
+	</div>	
+	
+	<div class="caja_principal">
+		<h3>Aquí tenemos una lista</h3>
+		<ol>
+			<li>Primer elemento de la lista </li>
+			<li>Segundo elemento de la lista </li>
+			<li>Tercer elemento de la lista </li>
+		</ol>
+	
+	</div>
+
+	
+	</body>
+	
+</html>

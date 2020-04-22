@@ -59,7 +59,7 @@ Imagina que, queremos que todos los párrafos (etiqueta \<p>\</p>) de mi página
     </head>
     <body>
         <h1>¿Qué entendemos por un párrafo?</h1>
-        <p>Un párrafo de texto se compone de un          bloque de texto independiente con una apariencia concreta, delimitado por un espacio superior y otro inferior.</p>
+        <p>Un párrafo de texto se compone de un bloque de texto independiente con una apariencia concreta, delimitado por un espacio superior y otro inferior.</p>
     </body>
 </html>
 ```
@@ -311,6 +311,7 @@ Hay que crear el fichero index.html con el siguiente contenido:
         <meta name="author" content="Juan Gualberto">
         <meta name="copyright" content="GNU GPLv3">
         <title>Buscaminas</title>
+        <link rel="stylesheet" href="css/estilos.css">
     </head>
     <body>
         <nav>
@@ -329,6 +330,21 @@ Hay que crear el fichero index.html con el siguiente contenido:
         <footer>
             <!-- Aquí irá información adicional en el pié -->
         </footer>
+        <script src="js/index.js"></script>
     </body>
 </html>
 ```
+
+Para cargar las hojas de estilos, usamos el elemento \<link> dentro la cabecera (elemento \<head>) :
+
+```html
+<link rel="stylesheet" href="css/estilos.css">
+```
+
+Para cargar el código JavaScript, fíjate cómo al final del código, justo antes del cierre de la etiqueta \</body>, como hamos añadido un elemento \<script>. Esto se hace así porque acelera la carga de la página en el navegador:
+
+```html
+<script src="js/index.js"></script>
+```
+
+Recuerda cómo hemos hecho esto porque vamos a utilizarlo de ahora en adelante cada vez que hagamos una página Web.

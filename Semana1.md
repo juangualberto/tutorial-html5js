@@ -4,7 +4,13 @@
 
 Cuando queremos visitar una página Web normalmente nos vamos a nuestro buscador favorito y hacemos la consulta. Pero si nos fijamos en la barra de direcciones, cuando estamos en esa Web, ahí hay escrito lo que llamamos un **identificador uniforme de recurso o URL** (Uniform Resource Locator), es decir una dirección que nos permite acceder de forma inequívoca a un recurso de un determinado servidor.
 
-El formato general de un URL es: **protocolo://máquina.directorio.archivo** aunque también pueden añadirse otros datos: **protocolo://usuario:contraseña@máquina:puerto.directorio.archivo**.
+El formato general de un URL es:
+
+> **protocolo://máquina.directorio.archivo**
+
+aunque también pueden añadirse otros datos:
+
+> **protocolo://usuario:contraseña@máquina:puerto.directorio.archivo**.
 
 Por ejemplo: [https://es.wikipedia.org/wiki/Localizador_de_recursos_uniforme](https://es.wikipedia.org/wiki/Localizador_de_recursos_uniforme):
 
