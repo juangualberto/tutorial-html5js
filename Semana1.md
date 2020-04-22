@@ -161,7 +161,7 @@ Esto da lugar en un navegador a la siguiente salida:
 
 ![uso de span](docs/span.png)
 
-### Hiperenlaces o anclas
+### Hiperenlaces o anclas
 
 El elemento ancla o hiperenlace \<a> crea un enlace a otras páginas de internet, archivos o incluso partes dentro de la misma página, direcciones de correo, o cualquier otra URL:
 
