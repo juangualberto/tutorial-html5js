@@ -6,7 +6,7 @@ Este curso ha sido realizado para ayudar a nuestros alumnos durante los meses de
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional</a>.
 
-Para seguir el curso te animamos a visitar el [canal de Youtube del autor](https://www.youtube.com/user/juanguedu) además de seguir estas explicaciones.
+Para seguir el curso te animamos a visitar este [canal de Youtube](https://www.youtube.com/user/juanguedu) donde podrás de seguir estas explicaciones.
 
 Si estás viendo una copia en formato PDF o ePub del libro, recuerda que siempre puedes acceder a la [última versión en el repositorio de Github](https://github.com/juangualberto/tutorial-html5js).
 
