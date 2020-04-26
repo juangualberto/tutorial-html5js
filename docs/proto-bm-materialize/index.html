@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscaminas</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/estilos.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  </head>
+    
+<body>
+     <!-- navbar content here  --> 
+<!--    <nav>
+        
+            <div class="nav-wrapper">
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger" class="brand-logo">BuscaMinas</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="#" data-target="slide-out" >Menú</a></li>
+              <li><a href="#">Partida</a></li>
+              <li><a href="#">Marcadores</a></li>
+              <li><a href="#">Ayuda</a></li>
+            </ul>
+          </div>
+    </nav>
+-->
+    <ul id="slide-out" class="sidenav">
+        <li class="sidenav-close"><div class="user-view">
+        <div class="background">
+            <img src="img/Screenshot_buscaminas01.png">
+        </div>
+        <a href="#user"><img class="circle" src="img/minesweeper.png"></a>
+        <a href="#name"><span class="name">BuscaMinas</span></a>
+        </div></li>
+        <li class="sidenav-close"><a id="menu_inicio" class="waves-effect" href="#!">Inicio</a></li>
+        <li class="sidenav-close"><a class="subheader">Partida</a></li>
+        <li class="sidenav-close"><a id="menu_tablero_facil" class="waves-effect" href="#!">Fácil</a></li>
+        <li class="sidenav-close"><a id="menu_tablero_medio" class="waves-effect" href="#!">Medio</a></li>
+        <li class="sidenav-close"><a id="menu_tablero_dificil" class="waves-effect" href="#!">Pesadilla</a></li>
+        <li class="sidenav-close"><div class="divider"></div></li>
+        <li class="sidenav-close"><a class="subheader">Ayuda</a></li>
+        <li class="sidenav-close"><a id="menu_ayuda" class="waves-effect" href="#!">Manual usuario</a></li>
+        <li class="sidenav-close"><a id="menu_licencia" class="waves-effect" href="#!">Licencia</a></li>
+        <li class="sidenav-close"><a href="https://github.com/juangualberto/tutorial-html5js" target="_blank"><i class="material-icons">cloud</i>Web del proyecto</a></li>    
+    </ul>
+    <div class="container">
+    <div id="controles" class="row">
+        <div class="col s4">
+            <div id="minas" class="reloj">12</div>
+        </div>
+        <div class="col s4">
+            <div id="carita" class="cara caraGanar"></div>
+        </div>
+        <div class="col s4">
+            <div id="reloj" class="reloj">0</div>
+        </div>
+    </div>
+
+    <div id="panel_inicio" class="panel">
+        inicio
+    </div>
+
+    <div id="panel_tablero_facil" class="panel contenedor_tablero">
+        <table><tr><td id="celda_0_0" class="bombaExplotada"></td><td id="celda_0_1" class="bomba"></td><td id="celda_0_2" class="twoCell"></td><td id="celda_0_3" class="twoCell"></td><td id="celda_0_4" class="twoCell"></td></tr><tr><td id="celda_1_0" class="twoCell"></td><td id="celda_1_1" class="threeCell"></td><td id="celda_1_2" class="threeCell"></td><td id="celda_1_3" class="bomba"></td><td id="celda_1_4" class="bomba"></td></tr><tr><td id="celda_2_0" class="nothingCell"></td><td id="celda_2_1" class="oneCell"></td><td id="celda_2_2" class="bomba"></td><td id="celda_2_3" class="threeCell"></td><td id="celda_2_4" class="twoCell"></td></tr><tr><td id="celda_3_0" class="oneCell"></td><td id="celda_3_1" class="twoCell"></td><td id="celda_3_2" class="twoCell"></td><td id="celda_3_3" class="oneCell"></td><td id="celda_3_4" class="nothingCell"></td></tr><tr><td id="celda_4_0" class="oneCell"></td><td id="celda_4_1" class="bomba"></td><td id="celda_4_2" class="oneCell"></td><td id="celda_4_3" class="nothingCell"></td><td id="celda_4_4" class="nothingCell"></td></tr></table>
+    </div>
+
+    <div id="panel_tablero_medio" class="panel">
+        Tabla media
+    </div>
+
+    <div id="panel_tablero_dificil" class="panel">
+        Tabla difícil
+    </div>
+
+    <div id="panel_ayuda" class="panel">
+        Cómo jugar.
+    </div>
+
+    <div id="panel_licencia" class="panel">
+        Creative Commons.
+    </div>
+</div>
+    <footer>
+        <a data-target="slide-out" class="btn-floating btn-large waves-effect waves-light red sidenav-trigger"><i class="material-icons">menu</i></a>
+        <!-- Aquí irá información adicional en el pié -->
+    </footer>
+
+<!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="js/controller.js"></script>
+      <script src="js/index.js"></script>
+    </body>
+
+</html>
