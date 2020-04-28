@@ -34,7 +34,7 @@ Podemos aplicar estilos dentro de un elemento concreto de la página web, median
 <p style="font-style: italic; color: rgb(20, 20, 200);">Un párrafo de texto se compone de un bloque de texto independiente con una apariencia concreta, delimitado por un espacio superior y otro inferior.</p>
 ```
 
-Esto se vería parecido a la siguiente imagen en un navegador:
+Esto se vería parecido a la siguiente imagen en un navegador (Estilos en elementos).
 
 ![Estilos en elementos](./docs/estiloenetiqueta.png)
 

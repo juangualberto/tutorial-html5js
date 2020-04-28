@@ -52,8 +52,23 @@ Diseñar páginas Web atractivas es un proceso altamente creativo, lo mismo que 
 
 Cuando diseñamos o bien pagamos para que nos hagan una aplicación o página Web, un recurso interesante para hacerse la idea de cómo queremos el producto final.
 
-[Prototipo 1: Basado en BootStrap](docs/proto-bm-bootstrap/index.html).
-[Prototipo 2: Basado en MaterializeCSS](docs/proto-bm-materialize/index.html).
+#### Diseño de prototipos
+
+Para decidir qué tipo de menú vamos a hacer, preparamos dos prototipos (pulsa en cada uno para ver el código fuente de cada uno). Para que te hagas una idea hemos preparado dos prototipos que puedes ver en vivo haciento *clic* en el enlace correspondiente.
+
+Primero hicimos el [prototipo 1, basado en BootStrap](https://juangualberto.github.io/librohtmljs/proto-bm-bootstrap/index.html). Observa en las imágenes el menú y la pantalla de juego en modo fácil.
+
+![Imagen del menú con BootStrap](docs/prototipo-bootstrap-menu.png)
+
+![Imagen del juego con BootStrap](docs/prototipo-bootstrap.png)
+
+A continuación te mostramos el [prototipo 2, basado en MaterializeCSS](https://juangualberto.github.io/librohtmljs/proto-bm-materialize/index.html). De nuevo fíjate en el tipo de menú y el modo juego fácil.
+
+![Imagen del menú con Materialize CSS](docs/prototipo-materialize-menu.png)
+
+![Imagen del juego con Materialize CSS](docs/prototipo-materialize.png)
+
+En nuestro caso nos vamos a decantar por BootStrap cuyo uso está más extendido que Materialize.
 
 ### El menú de nuestra aplicación
 
@@ -61,7 +76,7 @@ Ten a mano el esqueleto que hicimos la semana pasada donde teníamos la siguient
 
 ![Estructura de carpetas de una página Web](docs/estructuraArchivos.png)
 
-Abre el archivo **index.html** y vamos a modificar la cabecera para que quede así (cambia en el meta *author* tu nombre):
+Vamos a cargar de internet, de un CDN, BootStrap (Bootstrap es una biblioteca multiplataforma para diseño de sitios y aplicaciones web). Abre el archivo **index.html** y vamos a modificar la cabecera para que quede así (cambia en el meta *author* tu nombre):
 
 ```html
 <head>
@@ -76,7 +91,7 @@ Abre el archivo **index.html** y vamos a modificar la cabecera para que quede as
 </head>
 ```
 
-En el archivo **css/estilos.css** vamos a añadir nuestros estilos personales.
+Fíjate bien en las dos etiquetas \<link>, la primera es BootStrap, la necesitamos para no tener que dar el aspecto que van a tener a los menús desde cero (colores, botones...). Simplemente incluyendo las clases de BootStrap en nuestros programas, se van a ver mucho mejor. El segundo \<link> es el archivo **css/estilos.css**, donde vamos a añadir nuestros estilos personales.
 
 Ahora, justo antes de cerrar la etiqueta \<body> (fíjate, al final del archivo **index.html**), vamos a añadir nuestro código JavaScript:
 
@@ -99,7 +114,7 @@ Ahora, justo antes de cerrar la etiqueta \<body> (fíjate, al final del archivo 
 </html>
 ```
 
-Los archivos **js/index.js** (arranca o inicializa los componentes adicionales) y **js/controller.js** (gestiona que los menús funcionen) contendrán nuestro código JavaScript.
+Cargamos tres archivos de internet (jQuery, Popper y BootStrap) que son necesarios para las animaciones que trae de serie BootStrap. Los dos últimos archivos vamos a hacerlos nosotros: el archivo **js/index.js** (arranca o inicializa los componentes adicionales) y **js/controller.js** (gestiona que los menús funcionen). Estos últimos además contendrán el código JavaScript que vamos a programar nosotros.
 
 Ahora añadimos los menús, recuerda que son elementos de navegación (tu etiqueta etiqueta \<nav> debe quedar como la que ves a continuación) y que los hacemos con listas:
 
