@@ -1,10 +1,15 @@
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
+
 # Tutorial de introducción a HTML5, CSS3 y al pensamiento computacional con JavaScript 
 
 ## Introducción
 
 Este curso ha sido realizado para ayudar a nuestros alumnos durante los meses de confinamiento por la pandemia del COVID-19. Primavera del 2020.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional</a>.
+[![Licencia de Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)  
+Este obra está bajo una [licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional](http://creativecommons.org/licenses/by-sa/4.0/).
 
 Para seguir el curso te animamos a visitar este [canal de Youtube](https://www.youtube.com/user/juanguedu) donde podrás de seguir estas explicaciones.
 

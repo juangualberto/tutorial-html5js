@@ -1,3 +1,7 @@
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
+
 # Semana 1: HTML5 - Sintaxis básica y tablas
 
 ## ¿Cómo funciona Internet?
