@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Probando JS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/index.js">
+    </script>
+</head>
+<body>
+    <h1> Hola Mundo JS </h1>
+    <!-- Comentario HTML -->
+    <script>
+        /* Comentario JavaScript */
+        /* llamada bloqueante. JS es no bloqueante salvo esto */
+        let nombre = prompt("Dime tu nombre:");
+         // esto imprime un párrafo donde nos saluda
+        document.write("<p>1) Hola "+nombre+" ¿Qué tal todo?</p>");
+    </script>
+    <h2> Vamos a ver más ejemplos </h2>
+    <script>
+        // VARIABLES TIPO NÚMERO
+        let numero = 2 + 3;
+        document.write("<p>2) 2+3=" + numero + " que es de tipo: " + typeof(numero) + "</p>");
+        numero = 2.3 + 5.9;
+        document.write("<p>3) 2.3+5.9=" + numero + " que es de tipo: " + typeof(numero) + "</p>");
+        numero = 2.3 + "5.9";
+        document.write("<p>4) 2.3+'5.9'=" + numero + " que es de tipo: " + typeof(numero) + "</p>");
+        numero = 2.3 + +'5.9';
+        document.write("<p>5) 2.3+ +'5.9'=" + numero + " que es de tipo: " + typeof(numero) + "</p>");
+        numero = 2.3 + -'5.9';
+        document.write("<p>6) 2.3+ -'5.9'=" + numero + " que es de tipo: " + typeof(numero) + "</p>");
+        // VARIABLES TIPO CADENA DE CARACTERES
+        let cadena = "Hola";
+        cadena += " Mundo";
+        // se pueden anidar unas comillas dobles dentro de simples y viceversa
+        document.write('<p>7) cadena = "' + cadena + '", que es de tipo: ' + typeof(cadena) + '</p>');
+        document.write("<p>8) cadena = '" + cadena + "', que es de tipo: " + typeof(cadena) + "</p>");
+        document.write('<p>9) cadena = \'' + cadena + '\', que es de tipo: ' + typeof(cadena) + '</p>');
+        let variable = numero + cadena;
+        document.write('<p>10) variable= numero+cadena = \'' + variable + '\', que es de tipo: ' + typeof(variable) + '</p>');
+        // BOOLEANOS verdadero/falso
+        let booleano = true;
+        document.write("<p>11) boolano= " + booleano + ", que es de tipo: " + typeof(booleano)+ '</p>');
+        booleano = "pepe";
+        document.write("<p>12) boolano= " + booleano + ", que es de tipo: " + typeof(booleano)+ '</p>');
+    </script>
+</body>
+</html>

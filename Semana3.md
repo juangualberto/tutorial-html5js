@@ -169,7 +169,7 @@ Guardamos todo y abrimos en un navegador. ¿Te ha funcionado?
 
 ## Ejercicio horario de clase
 
-Recuerda la semana pasada cómo hicimos una tabla. Esta semana te proponemos hacer el horario de clase que teníamos antes del confinamiento en formato Web para practicar y darle "estilo". Como punto de partida, si quieres, puedes usar [este modelo](docs/horario.html):
+Recuerda la semana pasada cómo hicimos una tabla. Esta semana te proponemos hacer el horario de clase que teníamos antes del confinamiento en formato Web para practicar y darle "estilo". Como punto de partida, si quieres, puedes usar [este modelo que te proponemos](docs/horario.html).
 
 ![Modelo de horario](docs/horario.png)
 
