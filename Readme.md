@@ -19,7 +19,7 @@ Si estás viendo una copia en formato PDF o ePub del libro, recuerda que siempre
 
 Para cada entrega (semana) vamos creando una rama nueva, de tal manera que si quieres seguir el proyecto viendo los vídeos, sólo necesitarás cambiar a la rama de la semana del vídeo.
 
-## Índice de contenido
+## Resumen del curso
 
 1. [Semana 1: HTML5 - Sintaxis básica y tablas.](./Semana1.md)
    + Ejercicio: Plantilla de una página Web con hiperenlaces.
