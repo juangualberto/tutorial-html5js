@@ -15,6 +15,8 @@ Para seguir el curso te animamos a visitar este [canal de Youtube](https://www.y
 
 Si estás viendo una copia en formato PDF o ePub del libro, recuerda que siempre puedes acceder a la [última versión en el repositorio de Github](https://github.com/juangualberto/tutorial-html5js).
 
+Suponemos que tienes ciertas nociones de programación (sea por haber participado en alguna iniciativa como [Codeweek](https://codeweek.eu/) o [La hora del código](https://hourofcode.com/es) o con alguna herramienta visual como Scratch).
+
 ## Cómo usar el curso
 
 Para cada entrega (semana) vamos creando una rama nueva, de tal manera que si quieres seguir el proyecto viendo los vídeos, sólo necesitarás cambiar a la rama de la semana del vídeo.

@@ -153,7 +153,7 @@ Las variables pueden ser definidas de tres maneras:
 
 ### Tipos de datos
 
-Copia y pega el siguiente código JavaScript en tu editor favorito. Llama al fichero [tiposjavascript.html](docs/tiposjavascript.html) y guárdalo. Vamos a aprender los tipos de datos **number** (para números de cualquier tipo), **string** (cadenas de caracteres) y **boolean** (para booleanos: verdadero/falso).
+Copia y pega el siguiente código JavaScript en tu editor favorito. Llama al fichero [tiposjavascript.html](docs/tiposjavascript.html) y guárdalo. Vamos a aprender los tipos de datos **number** (para números de cualquier tipo), **string** (cadenas de caracteres) y **boolean** (para booleanos: verdadero/falso). Fíjate en las operaciones matemáticas, en que hay diferentes tipos de datos...
 
 ```html
 <!DOCTYPE html>
@@ -230,7 +230,9 @@ Ahora fíjate en la figura e intenta responder a las siguientes cuestiones :
 
 ## Estructuras de control
 
-### if-else
+### Condicionales if-else
+
+Si la expresión que hay entre paréntesis es cierta se ejecuta el código que hay entre los paréntesis (bloque), si existe un "else" y la condición es falsa, se ejecutará el código del segundo bloque.
 
 ```java
 let edad = prompt('Dime tu edad');
@@ -241,28 +243,83 @@ if (edad<18) {
 }
 ```
 
-### for
+### Bucle for
+
+Bucle **for**: Repetimos un bloque de código tantas veces como indicamos en la variable *i* indicamos, en este caso la longitud del array (en el siguiente tema veremos qué son) Ejemplo:
 
 ```java
 let semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+
+document.write('<h1> Los días de la semana (bucle FOR..OF) </h1>');
+console.log('Los días de la semana son:');
+document.write('<br>');
+for (let i=0; i<semana.length; i++) {
+    document.write("<p>" + semana[i] + "</p>");+
+    console.log(semana[i]);
+}
+document.write('<br>');
+```
+
+Bucle **for..of**: para cada elemento de un objeto especial que llamamos *iterable* repetimos tantas veces como elementos (una por cada elemento) de dicho objeto iterable. Ejemplo:
+
+```java
+let semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+
+document.write('<h1> Los días de la semana (bucle FOR..OF) </h1>');
+console.log('Los días de la semana son:');
+
+document.write('<br>');
+for (let dia of semana) {
+    document.write("<p>" + dia + "</p>");+
+    console.log(dia);
+}
+document.write('<br>');
+```
+
+Bucle **for..in**: Para un conjunto de atributos y su propiedad repetimos tantas veces como elementos tiene el conjunto. Ejemplo:
+
+```java
+let semana = {l:"Monday", m:"Tuesday", x:"Wednesday", j:"Thursday", v:"Friday", s:"Saturday", d:"Sunday"};
 
 document.write('<h1> Los días de la semana (bucle FOR) </h1>');
 console.log('Los días de la semana son:');
 
 document.write('<br>');
 for (let dia in semana) {
-    document.write("<p>" + semana[dia] + "</p>");+
+    document.write("<p>" + dia + " = " + semana[dia] + "</p>");
     console.log(dia);
 }
 document.write('<br>');
 ```
 
-### while
+### Bucle while
 
-### do-while
+Repite un bloque de código mientras la condición sea cierta. Puede ser que nunca lo sea, que nunca entremos. Ejemplo:
+
+```java
+let countdown = 10;
+document.write("<p> Empieza la cuenta atrás: </p>");
+while(countdown>0) {
+    countdown = countdown - 1;
+    document.write("<p> Empieza la cuenta atrás: </p>");
+}
+```
+
+### Bucle do..while
+
+Repite un bloque de código mientras la condición sea cierta. Como mínimo se repite una vez. Ejemplo:
+
+```java
+let countdown = 10;
+document.write("<p> Empieza la cuenta atrás: </p>");
+do {
+    countdown = countdown - 1;
+    document.write("<p> Empieza la cuenta atrás: </p>");
+}while(countdown>0) ;
+```
 
 ## Ejercicio tablas de multiplicar
 
-Hacer un programa que pregunte por un número del 1 al 10. Luego ha de mostrar la tabla de multiplicar de ese número usando para ello la estructura de control **for**.
+Hacer un programa que pregunte por un número del 1 al 10 (recuerda el ejemplo de la edad con el **if**). Guárdalo en una variable que vas a usar después para mostrar la tabla de multiplicar de ese número, usando para ello la estructura de control **for** (recuerda el ejemplo del primer *for* y los días de la semana).
 
 Puedes mostrar la salida (document.write) en la página o en la consola (console.log).
