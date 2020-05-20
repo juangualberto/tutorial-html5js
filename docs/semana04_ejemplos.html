@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="caja">
+        <h3>Semana 4</h3> 
+      </div>
+      <script>
+        // comentario de una linea
+        /*
+        Comentario multilínea
+        */
+        document.write("<p>¡Hola Mundo!</p>");
+        // variables de tipo numérico
+        let a = 8;
+        let b = 3;
+        let suma = a + b;
+        // variable de tipo booleano
+        let test = true;
+        if (test) { // bloque para agrupar instrucciones
+          // test = false;
+          document.write("Ahora test es:"+test);
+        }
+        let numero = 2 + 3;
+        document.write("<p>2) 2+3=" + numero + " que es de tipo: " + typeof(numero) + "</p>");
+        numero = 2.3 + 5.9;
+        document.write("<p>3) 2.3+5.9=" + numero + " que es de tipo: " + typeof(numero) + "</p>");
+        numero = 2.3 + "5.9"; // algo entre comillas es una cadena de caracteres, un string
+        document.write("<p>4) 2.3+'5.9'=" + numero + " que es de tipo: " + typeof(numero) + "</p>");
+        numero = 2.3 + +'pepe'; // pepe no es un número, noo se puede convertir ERROR NaN (Not a Number)
+        document.write("<p>5) 2.3+ +'5.9'=" + numero + " que es de tipo: " + typeof(numero) + "</p>");
+        numero = 2.3 + -'5.9';
+        document.write("<p>6) 2.3+ -'5.9'=" + numero + " que es de tipo: " + typeof(numero) + "</p>");
+        // VARIABLES TIPO CADENA DE CARACTERES
+        let cadena = "Hola";
+        cadena = cadena + " mundo";
+        document.write('<p>7) cadena = "' + cadena + '", que es de tipo: ' + typeof(cadena) + '</p>');
+        let edad = 7; //prompt('Dime tu edad');
+        if (edad<18) {
+          document.write('<p>Eres menor de edad</p>');
+        } else {
+          document.write('<p>Eres un adulto</p>');
+        }
+      </script>
+    <script>
+        // EJERCICIO DE LAS TABLAS
+        let tabla = prompt('¿De qué número quieres la tabla?');
+        for (let i=1; i<=10;i++){
+          document.write("<p>"+ tabla +" x "+ i +" = " + ( tabla*i ) + "</p>");
+        }
+    </script>
+</body>
+</html>

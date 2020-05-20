@@ -175,6 +175,4 @@ Recuerda la semana pasada cómo hicimos una tabla. Esta semana te proponemos hac
 
 El diseño es libre. Puedes usar los colores que desees, se trata simplemente de explorar las opciones que nos ofrecen las hojas de estilo.
 
-[![Presentación del curso](http://img.youtube.com/vi/9nEBwHklW2c/0.jpg)](http://www.youtube.com/watch?v=9nEBwHklW2c)
-
 Crea una carpeta aparte "semana2" y hazlo ahí.

@@ -352,3 +352,5 @@ Para cargar el código JavaScript, fíjate cómo al final del código, justo ant
 ```
 
 Recuerda cómo hemos hecho esto porque vamos a utilizarlo de ahora en adelante cada vez que hagamos una página Web.
+
+[![Semana 2](http://img.youtube.com/vi/9nEBwHklW2c/0.jpg)](http://www.youtube.com/watch?v=9nEBwHklW2c)

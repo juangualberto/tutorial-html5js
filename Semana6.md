@@ -1,4 +1,4 @@
-<div style="page-break-after: always; visibility: hidden; display:none"> 
+<div style="display:none"> 
 \pagebreak 
 </div>
 
