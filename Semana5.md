@@ -20,7 +20,7 @@ Conceptos clave:
 
 Podemos definir una variable con *var*, *let* y *const*. El último básicamente se usa cuando no vamos a cambiar el valor almacenado nunca, ejemplo:
 
-```javascript
+```java
 const pi = 3.14159
 ```
 
@@ -32,7 +32,7 @@ Ahora bien, no es lo mismo usar *var* que *let*: **var** declara una variable de
 | let  | global, bloque y subloques  |   | sí  |
 | const  | global, bloque y subloques  |   | no  |
 
-```javascript
+```java
 function test() {
     let saludo = "hola"; // local variable
 }
@@ -42,7 +42,7 @@ console.log(saludo); // ¡error!
 
 En el código anterior, la variable *saludo* sólo existen dentro de la función test (fíjate cómo está dentro de unas llaves, de un bloque). La variable *saludo* sólo existirá dentro del bloque donde fue definida y, de haber subbloques dentro, también ahí (salvo que creemos otra que se llame igual).
 
-```javascript
+```java
 function comprueba1(booleano){
     let saludo = "Hola";
     if(booleano) {
@@ -74,7 +74,7 @@ En la función *comprueba1()* dentro del *if* definimos una nueva variable que n
 
 ### Listas
 
-```javascript
+```java
 let coches = ['VW', 'Seat', 'Audi', 'Porsche', 'Mercedes']
 
 console.log(coches.length);
@@ -87,7 +87,7 @@ console.log(coches[4]);
 
 ### Diccionarios
 
-```javascript
+```java
 let persona = {
   "nombre": "John",
   "apellidos": "Doe",
@@ -133,7 +133,7 @@ Eso es lo que vamos a hacer nosotros en este ejemplo. Recuperamos nuestro *index
 
 Añadimos el controlador. Este código es un objeto que se encarga de ir cambiando qué panel se ve en cada momento.
 
-```javascript
+```java
 // fichero js/controlador.js
 /**
  * Biblioteca "casera" para hacer el "binding" del
@@ -183,7 +183,7 @@ $.controller.init = function (panel_inicial) {
 
 Como los componentes, valores por defecto, etc. los ponemos en el fichero *js/index.js* hay que decirle que arranque el controlador:
 
-```javascript
+```java
 /**
  * Cuando la página se ha cargado entera, comenzamos:
  *     -  Inicializamos componentes
