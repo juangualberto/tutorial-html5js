@@ -100,6 +100,39 @@ console.log(persona["nombre"]);
 
 ## Ejemplo de función: creando el tablero de juego
 
+Entre los programadores de aplicaciones y páginas Web, hoy día es habitual que parte de la ventana que estamos viendo no cambia nunca y otra parte se va mostrando, ocultando o incluso variando su contenido. Técnicamente estaríamos hablando de una aplicación en una página (*single applicaton page o SAP*) que se comunica asíncronamente con un servidor y va modificando dinámicamente lo que vemos con funciones JavaScript.
+
+Eso es lo que vamos a hacer nosotros en este ejemplo. Recuperamos nuestro *index.html* del BuscaMinas y añadimos estas cajas:
+
+```html
+// esto va justo después del <nav> </nav>
+<div class="container">
+    <div id="panel_inicio" class="panel">
+        <p>Inicio</p>
+    </div>
+    <div id="panel_partida_facil" class="panel">
+        <p>Partida Fácil</p>
+    </div>
+    <div id="panel_partida_medio" class="panel">
+        <p>Partida Medio</p>
+    </div>
+    <div id="panel_partida_dificil" class="panel">
+        <p>Partida Dificil</p>
+    </div>
+    <div id="panel_ayuda" class="panel">
+        <p>Ayuda</p>
+    </div>
+    <div id="panel_licencia" class="panel">
+        <p>Licencia</p>
+    </div>
+    <div id="panel_puntuaciones" class="panel">
+        <p>Puntuaciones</p>
+    </div>
+</div>
+```
+
+Añadimos el controlador. Este código es un objeto que se encarga de ir cambiando qué panel se ve en cada momento.
+
 ```javascript
 // fichero js/controlador.js
 /**
@@ -146,6 +179,34 @@ $.controller.init = function (panel_inicial) {
     $.controller.active_panel = panel_inicial;
 
 }
+```
+
+Como los componentes, valores por defecto, etc. los ponemos en el fichero *js/index.js* hay que decirle que arranque el controlador:
+
+```javascript
+/**
+ * Cuando la página se ha cargado entera, comenzamos:
+ *     -  Inicializamos componentes
+ *     -  Configuramos opciones
+ *     -  Cargamos valores por defecto
+ *     -  Etc... 
+ */
+$(function() {
+    /**
+     * Código para hacer que se cierre sólo el menú al pulsar sobre él
+     */
+    $('.navbar-nav li a').on('click', function(){
+        if(!$( this ).hasClass('dropdown-toggle')){
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
+
+    /**
+     * Iniciamos el controlador que gestiona los eventos de 
+     * los menús y activa/desactiva las vistas
+     */
+    $.controller.init("#panel_inicio");
+});
 ```
 
 ## Ejercicio: Adivina en qué número pienso
