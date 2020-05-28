@@ -428,3 +428,5 @@ do {
 Hacer un programa que pregunte por un número del 1 al 10 (recuerda el ejemplo de la edad con el **if**). Guárdalo en una variable que vas a usar después para mostrar la tabla de multiplicar de ese número, usando para ello la estructura de control **for** (recuerda el ejemplo del primer *for* y los días de la semana).
 
 Puedes mostrar la salida (document.write) en la página o en la consola (console.log).
+
+[![Semana 4](http://img.youtube.com/vi/h4oaSMk2sVI/0.jpg)](https://youtu.be/h4oaSMk2sVI)
