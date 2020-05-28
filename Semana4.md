@@ -228,6 +228,87 @@ Ahora fíjate en la figura e intenta responder a las siguientes cuestiones :
 11. Los booleanos, la lógica, son muy importantes en programación
 12. Aunque hemos definido una variable con otro tipo, al asignar se puede cambiar el tipo. Esto es muy peligroso
 
+Operadores de comparación:
+
+No es lo mismo el comparador estricto (=== ó !==) que el regular (== ó !=). ¡Cuidado con los cambios de tipo!
+
+```javascript
+// OPERADORES de COMPARACIÓN
+var numero1 = 5;
+var numero2 = '5';
+
+document.write('numero1=5, numero2="5" ');
+
+// COMPARACION REGULARES
+var resultado = numero1 >= numero2;
+document.write('<br>');
+document.write('numero1 >= numero2 = ' + resultado);
+
+resultado = numero1 <= numero2;
+document.write('<br>');
+document.write('numero1 <= numero2 = ' + resultado);
+
+resultado = numero1 == numero2;
+document.write('<br>');
+document.write('numero1 == numero2 = ' + resultado);
+
+resultado = numero1 != numero2;
+document.write('<br>');
+document.write('numero1 != numero2 = ' + resultado);
+
+// COMPARACIÓN ESTRICTA 
+var resultado = numero1 >= numero2;
+document.write('<br>');
+document.write('numero1 >= numero2 = ' + resultado);
+
+resultado = numero1 <= numero2;
+document.write('<br>');
+document.write('numero1 <= numero2 = ' + resultado);
+
+resultado = numero1 === numero2;
+document.write('<br>');
+document.write('numero1 === numero2 = ' + resultado);
+
+resultado = numero1 !== numero2;
+document.write('<br>');
+document.write('numero1 !== numero2 = ' + resultado);
+```
+
+Conversiones de tipos de datos: Usamos parseInt() y parseFloat(). Cuidado que no redondean, sólo truncan (cortan) el resultado.
+
+```javascript
+// EJEMPLO DE CONVERSION: "PARSEINT"
+numero2 = '5.2 enanitos de blancanieves';
+document.write('<br>numero1=' + numero1 + ', numero2="' + numero2 + '" ');
+resultado = numero1 === parseInt(numero2);
+document.write('<br>');
+document.write('Usando parseInt (sólo coge los primeros enteros que encuentra) <br>');
+document.write('numero1 === parseInt(numero2) = ' + resultado);
+
+resultado = numero1 !== parseInt(numero2);
+document.write('<br>');
+document.write('numero1 !== parseInt(numero2) = ' + resultado);
+
+
+// Introducción a ESTRUCTURA DE CONTROL if
+document.write("<h1>Estructura de control IF-ELSE</h1>");
+var dato1 = parseInt(prompt('Dame un número:'));
+var dato2 = parseInt(prompt('Dame otro número:'));
+
+if (isNaN(dato1) || isNaN(dato2)) {
+    document.write('Eso no era un número<br>');
+} else {
+    if (dato1 <= dato2) {
+        document.write('El primero es menor o igual que el segundo<br>');
+    } else
+    if (dato1 >= dato2) {
+        document.write('El primero es mayor o igual que el segundo<br>');
+    } else {
+        document.write('Ninguno de los casos<br>');
+    }
+}
+```
+
 ## Estructuras de control
 
 ### Condicionales if-else
@@ -240,6 +321,30 @@ if (edad<18) {
     document.write('<p>Eres menor de edad</p>');
 } else {
     document.write('<p>Eres un adulto</p>')
+}
+```
+
+### Switch..case...break
+
+La estructura de control **switch** nos ayuda cuando tenemos múltiples opciones a evaluar. Por ejemplo, cuando llamas a un servicio de atención telefónica nos dice la locución: pulse 1 para compras, pulse 2 para ventas, pulse 3 para administración, etc. ¿Cómo se programa esto? Así:
+
+```javascript
+let dato = 0;
+switch (dato) {
+  case -1:
+    console.log('uno negativo');
+    break;
+  case 0: // foo es 0, por lo tanto se cumple la condición y se ejecutara el siguiente bloque
+    console.log('cero')
+    // NOTA: el "break" olvidado debería estar aquí
+  case 1: // No hay sentencia "break" en el 'case 0:', por lo tanto este caso también será ejecutado
+    console.log('uno');
+    break; // Al encontrar un "break", no será ejecutado el 'case 2:'
+  case 2:
+    console.log('dos');
+    break;
+  default:
+    console.log('default');
 }
 ```
 
