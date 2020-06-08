@@ -410,4 +410,4 @@ class Juego {
 }
 ```
 
-[![Semana 7](http://img.youtube.com/vi/ucWA_o--vMc/0.jpg)](https://youtu.be/ucWA_o--vMc)
+[![Semana 6](http://img.youtube.com/vi/VbRxCefGE_A/0.jpg)](https://youtu.be/VbRxCefGE_A)

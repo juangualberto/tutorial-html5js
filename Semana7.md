@@ -4,6 +4,7 @@
 
 # Semana 7: JavaScript - Pensamiento computacional. Algoritmos
 
-[![Semana 7](http://img.youtube.com/vi/lwFcnIOyyLI/0.jpg)](https://youtu.be/lwFcnIOyyLI)
+[![Semana 7](http://img.youtube.com/vi/ucWA_o--vMc/0.jpg)](https://youtu.be/ucWA_o--vMc)
+
 
 ## Ejercicio: La letra del DNI
