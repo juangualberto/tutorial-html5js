@@ -429,4 +429,10 @@ Hacer un programa que pregunte por un número del 1 al 10 (recuerda el ejemplo d
 
 Puedes mostrar la salida (document.write) en la página o en la consola (console.log).
 
+## Ejercicios resueltos y videotutorial de la semana
+
+En [Codepen.io](https://codepen.io/juangu/pen/rNOZrvZ) tenéis los ejercicios resueltos.
+
+En [Youtube](https://youtu.be/h4oaSMk2sVI) está el tutorial de la semana.
+
 [![Semana 4](http://img.youtube.com/vi/h4oaSMk2sVI/0.jpg)](https://youtu.be/h4oaSMk2sVI)

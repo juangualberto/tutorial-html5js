@@ -4,5 +4,6 @@
 
 # Semana 7: JavaScript - Pensamiento computacional. Algoritmos
 
-## Ejercicio: La letra del DNI
+[![Semana 7](http://img.youtube.com/vi/lwFcnIOyyLI/0.jpg)](https://youtu.be/lwFcnIOyyLI)
 
+## Ejercicio: La letra del DNI

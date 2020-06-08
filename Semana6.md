@@ -408,5 +408,6 @@ class Juego {
         }
     }
 }
-
 ```
+
+[![Semana 7](http://img.youtube.com/vi/ucWA_o--vMc/0.jpg)](https://youtu.be/ucWA_o--vMc)
