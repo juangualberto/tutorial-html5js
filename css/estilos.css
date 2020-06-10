@@ -1,1 +1,215 @@
-/* Fichero estilos.css  */ 
+#tablero {
+  border-radius: 5px;
+  width: 90%;
+  margin: 0px auto;
+}
+
+body {
+  background-color: rgb(230, 230, 230);
+}
+
+nav {
+  background-color: rgb(230, 230, 230);
+}
+
+
+div.controles {
+  background-color: lightgrey;  
+  padding: 1em;
+  border: 0.5em;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 0.2em;
+  box-shadow: 0.5em 0.5em lightgrey;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: fuenteDigital;
+  src:url(../fonts/SFDigitalReadout-Heavy.ttf);
+}
+
+div.reloj {
+    color: red;
+    background-color: black;
+    padding: 0.5 em;
+    border-color: grey;
+    border: 0.2em;
+    border-style: solid;   
+    font-family: fuenteDigital;
+    font-size: 200%;
+    text-align:center;
+    border-radius: 0.2em;
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+    width: 1.7em;
+}
+
+
+div.caraFeliz {
+  background: url("../img/caritaFeliz.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0.1em auto; 
+}
+
+div.caraGanar {
+  background: url("../img/caritaGanar.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+}
+
+div.caraPerder {
+  background: url("../img/caritaPerder.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+}
+
+div.caraBanderita {
+  background: url("../img/caritaBanderita.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+}
+
+.vacio{
+   background: rgb(114, 114, 114);
+   box-shadow: inset 0 0 8px rgb(121, 120, 120);
+   border: 2px outset rgb(172, 171, 171);
+   height: 4em;
+   width: 4em;
+   background-color: rgb(223, 221, 221);
+ }
+
+ div.tablero_minas{
+  /* margin: 0 auto; */
+  margin-top: 1em;
+  justify-content: center;
+ }
+
+ .bandera {
+  background: url("../img/bandera.jpg") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+ }
+
+ .bomba {
+  background: url("../img/bomba.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+ }
+
+ .bombaAnulada {
+  background: url("../img/bombaAnulada.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+ }
+
+ .bombaExplotada {
+  background: url("../img/bombaExplotada.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+ }
+
+ .oneCell {
+  background: url("../img/one-cell.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+ }
+
+ .twoCell {
+  background: url("../img/two-cell.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+ }
+
+ .threeCell {
+  background: url("../img/three-cell.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+ }
+
+ .fourCell {
+  background: url("../img/four-cell.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+ }
+
+ .fiveCell {
+  background: url("../img/five-cell.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+ }
+
+ .sixCell {
+  background: url("../img/six-cell.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+ }
+
+ .sevenCell {
+  background: url("../img/seven-cell.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+ }
+
+ .eightCell {
+  background: url("../img/eight-cell.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+ }
+
+ .nothingCell {
+  background: url("../img/nothing-cell.png") no-repeat center;
+  background-size: 100% 100%;
+	height: 4em;
+  width: 4em;
+  margin: 0 auto;
+ }
+
+ table {
+  border-radius: 5px;
+  margin: 0px auto;
+  float: none;
+}
+
+div.contenedor_tablero {
+  margin-top: 1em;
+}
+
+div.contenedor {
+  margin: 0px auto;
+  float: none;
+}
