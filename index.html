@@ -89,6 +89,52 @@
             </div>
         </div>
     </div>
+    
+    <div id="modalGanar" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <h4 class="modal-title">¡Has ganado!</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+            <p>Introduce tu nombre:</p>
+            <input type="text" placeholder="Escribe tu nombre" id="nomGanador"/>
+            <p>Tiempo</p>
+            <span id="tiempo_jug"/>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="inGanador">Aceptar</button>
+            </div>
+        </div>
+    
+        </div>
+    </div>
+
+    <div id="modalFama" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <h4 class="modal-title">Puntuaciones</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <span  id="listaJugadores"/>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="inGanador">Aceptar</button>
+            </div>
+        </div>
+    
+        </div>
+    </div>
+
         <!-- Aquí cargamos los SCRIPTS para acelerar la carga de la página -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

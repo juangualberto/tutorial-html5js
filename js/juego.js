@@ -54,7 +54,7 @@ class Juego {
         this.caja_minas.html(minas);
         this.caja_tiempo.html(0);
         this.fin = false;
-
+        this.perder = false;
         this.pintaTablero();
         // this.resuelve();
 
@@ -115,13 +115,13 @@ class Juego {
         console.log("abre SE:: i="+i+" j="+j);
         if (this.matriz.get(i,j) == 0){
             this.cambiaClase(i, j);
-            if (i<(this.matriz.getFilas()-1) && j>=this.matriz.getColumnas()){
+            if ((i+1)<this.matriz.getFilas() && j<this.matriz.getColumnas()){
                 this.abreSE(i+1, j);
             }
-            if (i<this.matriz.getFilas() && j<(this.matriz.getColumnas()-1)){
+            if (i<this.matriz.getFilas() && (j+1)<this.matriz.getColumnas()){
                 this.abreSE(i, j+1);
             }
-            if (i<(this.matriz.getFilas()-1) && j<(this.matriz.getColumnas()-1)) {
+            if ((i+1)<this.matriz.getFilas() && (j+1)<this.matriz.getColumnas()){
                 this.abreSE(i+1, j+1);
             }
         }
@@ -135,7 +135,7 @@ class Juego {
         } 
         // hemos ganado!!
         // if (this.aciertos==0 && this.disparos>=this.minas) {
-        if (this.disparos >= ((this.filas*this.columnas)-this.minas)){
+        if (!this.perder && this.disparos >= ((this.filas*this.columnas)-this.minas)){
                 this.resuelve(false);
                 clearInterval(this.timer);
                 this.caja_carita.removeAttr('class');
@@ -186,6 +186,7 @@ class Juego {
                 this.aciertos=-1;
                 clearInterval(this.timer);
                 // alert("Has perdido!!!");
+                this.perder = true;
                 this.matriz.set(i,j,-11);
                 this.resuelve(true);
                 break;
@@ -249,16 +250,15 @@ class Juego {
             if (i>0 && j>0) {
                 this.abreNO(i-1, j-1);
             }
-            if (i<(this.matriz.getFilas()+1) && j>=this.matriz.getColumnas()){
+            if ((i+1)<this.matriz.getFilas() && j<this.matriz.getColumnas()){
                 this.abreSE(i+1, j);
             }
-            if (i<=this.matriz.getFilas() && j<(this.matriz.getColumnas()+1)){
+            if (i<this.matriz.getFilas() && (j+1)<this.matriz.getColumnas()){
                 this.abreSE(i, j+1);
             }
-            if (i<(this.matriz.getFilas()+1) && j<(this.matriz.getColumnas()+1)) {
+            if ((i+1)<this.matriz.getFilas() && (j+1)<this.matriz.getColumnas()){
                 this.abreSE(i+1, j+1);
             }
-            
         }
     }
 
