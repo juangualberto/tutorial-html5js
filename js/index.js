@@ -28,6 +28,42 @@ $(function() {
      */
     $.controller.init("#panel_inicio");
 
+
+    $.singleDoubleClick = function(singleClk, doubleClk) {
+        return (function() {
+          var alreadyclicked = false;
+          var alreadyclickedTimeout;
+    
+          return function(e) {
+            if (alreadyclicked) {
+              // double
+              alreadyclicked = false;
+              alreadyclickedTimeout && clearTimeout(alreadyclickedTimeout);
+              doubleClk && doubleClk(e);
+            } else {
+              // single
+              alreadyclicked = true;
+              alreadyclickedTimeout = setTimeout(function() {
+                alreadyclicked = false;
+                singleClk && singleClk(e);
+              }, 300);
+            }
+          };
+        })();
+      };
+
+
+    function setDisparos() {
+      $('td').bind('click', $.singleDoubleClick(function(e){
+        //single click.
+        juego.disparo(e.target);
+      }, function(e){
+        //double click.
+        juego.cambiaBandera(e.target);
+      }));
+    }
+
+/*
     function setDisparos() {
         $("td").each(
             function(){
@@ -36,8 +72,12 @@ $(function() {
                     console.log("Has disparado en: "+event.target.getAttribute('id'));
                     juego.disparo(event.target);
                 });
+                $(this).dblclick(function (event){
+                    console.log("Has disparado en: "+event.target.getAttribute('id'));
+                    juego.cambiaBandera(event.target);
+                });
             });
-    }
+    }*/
 
     $("#menu_partida_facil").click(function(){
         if (juego==undefined) {
@@ -66,4 +106,8 @@ $(function() {
         setDisparos();
     });
 
+    $("#carita").dblclick(function(){
+        juego.partida();
+        setDisparos();
+    });
 });

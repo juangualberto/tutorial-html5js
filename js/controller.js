@@ -39,4 +39,27 @@ $.controller.init = function (panel_inicial) {
     $(".panel").hide();
     $.controller.active_panel = panel_inicial;
     $.controller.activate(panel_inicial);
-}
+};
+
+$.singleDoubleClick = function(singleClk, doubleClk) {
+    return (function() {
+      var alreadyclicked = false;
+      var alreadyclickedTimeout;
+
+      return function(e) {
+        if (alreadyclicked) {
+          // double
+          alreadyclicked = false;
+          alreadyclickedTimeout && clearTimeout(alreadyclickedTimeout);
+          doubleClk && doubleClk(e);
+        } else {
+          // single
+          alreadyclicked = true;
+          alreadyclickedTimeout = setTimeout(function() {
+            alreadyclicked = false;
+            singleClk && singleClk(e);
+          }, 300);
+        }
+      };
+    })();
+  };

@@ -172,6 +172,20 @@ class Juego {
         return (this.marcadores.getTabla());
     }
 
+    cambiaBandera(caja){
+        let seleccion = $("#"+caja.id);
+        console.log(seleccion);
+        if (seleccion.hasClass("vacio")) {
+            seleccion.removeAttr("class");
+            seleccion.addClass("bandera");
+        } else {
+            if (seleccion.hasClass("bandera")) {
+                seleccion.removeAttr("class");
+                seleccion.addClass("vacio");
+            }
+        }
+    }
+
     cambiaClase(i,j){
         if (this.matriz.get(i,j)<10) {
             this.disparos++;
