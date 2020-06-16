@@ -10,7 +10,7 @@
  */
 $(function() {
 
-    let juego;
+    let juego = new Juego("#reloj","#minas","#carita", "#panel_puntuaciones");
 
     /**
      * Código para hacer que se cierre sólo el menú al pulsar sobre él
@@ -52,7 +52,6 @@ $(function() {
         })();
       };
 
-
     function setDisparos() {
       $('td').bind('click', $.singleDoubleClick(function(e){
         //single click.
@@ -63,44 +62,19 @@ $(function() {
       }));
     }
 
-/*
-    function setDisparos() {
-        $("td").each(
-            function(){
-                $(this).on("click",        
-                function (event){
-                    console.log("Has disparado en: "+event.target.getAttribute('id'));
-                    juego.disparo(event.target);
-                });
-                $(this).dblclick(function (event){
-                    console.log("Has disparado en: "+event.target.getAttribute('id'));
-                    juego.cambiaBandera(event.target);
-                });
-            });
-    }*/
-
-    $("#menu_partida_facil").click(function(){
-        if (juego==undefined) {
-            juego = new Juego("#reloj","#minas","#carita","#panel_partida_facil");
-        }
+    $("#menu_partida_facil").click(function(){     
         juego.setTablero("#panel_partida_facil");
-        juego.partida(5,5,5);
+        juego.partida(5,5,1);
         setDisparos();
     });
 
     $("#menu_partida_medio").click(function(){
-        if (juego==undefined) {
-            juego = new Juego("#reloj","#minas","#carita","#panel_partida_facil");
-        }
         juego.setTablero("#panel_partida_medio");
         juego.partida(8,8,8);
         setDisparos();
     });
 
     $("#menu_partida_dificil").click(function(){
-        if (juego==undefined) {
-            juego = new Juego("#reloj","#minas","#carita","#panel_partida_facil");
-        }
         juego.setTablero("#panel_partida_dificil");
         juego.partida(10,10,10);
         setDisparos();
@@ -110,4 +84,11 @@ $(function() {
         juego.partida();
         setDisparos();
     });
+
+    $("#salvarPuntos").click(function(){
+      console.log("Guardar puntos");
+      juego.guardarPuntos();
+      $.controller.activate("#panel_puntuaciones");
+    });
+
 });

@@ -18,20 +18,32 @@ class Juego {
      * de las minas donde hacer clic
      */
     constructor(id_tiempo="#tiempo", id_minas="#minas", 
-            id_carita="#carita"){ //, id_tablero="#tablero"){
+            id_carita="#carita", id_puntuaciones="#puntuaciones"){ //, id_tablero="#tablero"){
         this.caja_tiempo=$(id_tiempo);
         this.caja_minas=$(id_minas);
         this.caja_carita=$(id_carita);
+        this.caja_puntuaciones=$(id_puntuaciones);   
         // this.caja_tablero=$(id_tablero);
         this.marcadores = new Marcadores();
+        this.caja_puntuaciones.html(this.marcadores.getTabla());
         this.timer=null;
     }
 
+    /**
+     * Establece la caja donde vamos a colgar el tablero.
+     * @param {DIV} id_tablero 
+     */
     setTablero(id_tablero){
         this.old_caja_tablero = this.caja_tablero;
         this.caja_tablero = $(id_tablero);
     }
 
+    /**
+     * Arranca una nueva partida
+     * @param {number} filas 
+     * @param {number} columnas 
+     * @param {number} minas 
+     */
     partida(filas=10, columnas=10, minas=20){
         if (this.old_caja_tablero==undefined) {
             this.old_caja_tablero = $(this.id_tablero);
@@ -66,6 +78,10 @@ class Juego {
         this.matriz.imprimeMatriz();
     }
 
+    /**
+     * Destapa el tablero 
+     * @param {boolean} perder 
+     */
     resuelve(perder){
         this.fin = true;
         if (this.matriz!=undefined) {
@@ -84,92 +100,20 @@ class Juego {
         }
     }
 
-    /*
-    destapa(fila,columna){
-        if (fila>=0 && fila<this.filas && columna>=0 && columna<this.columnas) {
-            console.log("destapando "+fila+","+columna);
-            // this.cambiaClase(fila,columna);
-            this.destapa(fila-1,columna-1);
-            this.destapa(fila+1,columna+1);
-        }
-    }
-    */
-
-   abreNO(i,j){
-        console.log("abre NO:: i="+i+" j="+j);
-        if (this.matriz.get(i,j) == 0 ){
-            this.cambiaClase(i, j);
-            if (i>0 && j>=0) {
-                this.abreNO(i-1, j);
-            } 
-            if (i>=0 && j>0) {
-                this.abreNO(i, j-1);
-            }
-            if (i>0 && j>0) {
-                this.abreNO(i-1, j-1);
-            }
-        }
-    }
-
-    abreSE(i,j) {
-        console.log("abre SE:: i="+i+" j="+j);
-        if (this.matriz.get(i,j) == 0){
-            this.cambiaClase(i, j);
-            if ((i+1)<this.matriz.getFilas() && j<this.matriz.getColumnas()){
-                this.abreSE(i+1, j);
-            }
-            if (i<this.matriz.getFilas() && (j+1)<this.matriz.getColumnas()){
-                this.abreSE(i, j+1);
-            }
-            if ((i+1)<this.matriz.getFilas() && (j+1)<this.matriz.getColumnas()){
-                this.abreSE(i+1, j+1);
-            }
-        }
-    }
-
-    resuelveCelda(i,j){
-        let td = $("#celda_"+i+"_"+j);
-        if (this.aciertos>0){
-            this.aciertos--;
-            this.cambiaClase(i,j);
-        } 
-        // hemos ganado!!
-        // if (this.aciertos==0 && this.disparos>=this.minas) {
-        if (!this.perder && this.disparos >= ((this.filas*this.columnas)-this.minas)){
-                this.resuelve(false);
-                clearInterval(this.timer);
-                this.caja_carita.removeAttr('class');
-                this.caja_carita.addClass('caraGanar');
-                // alert("Has ganado!!!");
-                let tiempo = (+this.caja_tiempo.html());
-                let filas =  this.filas;
-                let columnas = this.columnas;
-                let puntos = Math.floor( (this.minas*this.minas)/(filas*columnas*tiempo)*100000);
-                $('#puntosJugador').html(puntos);
-                $('#tiempoJugador').html(tiempo);
-                $("#modalPuntuacion").modal();
-        } 
-        console.log("MATRIZ:: "+this.matriz);
-        this.matriz.imprimeMatriz();
-        /*
-        if (this.matriz.get(i,j)==0) {
-            console.log("Abriendo vacíos...");
-            this.abreNO(i, j);
-            this.abreSE(i, j);
-        }*/
-    }
-
     guardarPuntos(){
         let filas =  this.filas;
         let columnas = this.columnas;
         let tiempo = (+this.caja_tiempo.html());
         let puntos = Math.floor( (this.minas*this.minas)/(filas*columnas*tiempo)*100000);
+        this.marcadores.load();
         this.marcadores.addMarcador($('#nombreJugador').val(), 
             puntos, tiempo, filas, 
             columnas, this.minas);
         $('#puntosJugador').html(puntos);
         $('#tiempoJugador').html(tiempo);
-        return (this.marcadores.getTabla());
+        
+        this.caja_puntuaciones.html(this.marcadores.getTabla());
+        console.log(this.marcadores.getTabla());
     }
 
     cambiaBandera(caja){
@@ -184,6 +128,71 @@ class Juego {
                 seleccion.addClass("vacio");
             }
         }
+    }
+
+    resuelveCelda(i,j){
+        
+        if (this.aciertos>0){
+            this.aciertos--;
+            this.cambiaClase(i,j);
+        } 
+       
+        if (!this.perder && this.disparos >= ((this.filas*this.columnas)-this.minas)){
+             // hemos ganado!!
+                this.resuelve(false);
+                clearInterval(this.timer);
+                this.caja_carita.removeAttr('class');
+                this.caja_carita.addClass('caraGanar');
+                // alert("Has ganado!!!");
+                let tiempo = (+this.caja_tiempo.html());
+                let filas =  this.filas;
+                let columnas = this.columnas;
+                let puntos = Math.floor( (this.minas*this.minas)/(filas*columnas*tiempo)*100000);
+                $('#puntosJugador').html(puntos);
+                $('#tiempoJugador').html(tiempo);
+                $("#modalGanar").modal();
+        } 
+
+        if (this.matriz.get(i,j)==10 && !this.fin) {
+            console.log("Abriendo vacíos...");
+            if (i>0 && j>=0) {
+                if (this.matriz.get(i-1,j)<10)
+                    this.resuelveCelda(i-1, j);
+            } 
+            if (i>=0 && j>0) {
+                if (this.matriz.get(i,j-1)<10)
+                    this.resuelveCelda(i, j-1);
+            }
+            if (i>0 && j>0) {
+                if (this.matriz.get(i-1,j-1)<10)
+                    this.resuelveCelda(i-1, j-1);
+            }
+            if (i>0 && (j+1)<this.matriz.getColumnas()) {
+                if (this.matriz.get(i-1,j+1)<10)
+                    this.resuelveCelda(i-1, j+1);
+            }
+            if ((i+1)<this.matriz.getFilas() && j>0) {
+                if (this.matriz.get(i+1,j-1)<10)
+                    this.resuelveCelda(i+1, j-1);
+            }
+            if ((i+1)<this.matriz.getFilas() && j<this.matriz.getColumnas()){
+                if (this.matriz.get(i+1,j)<10)
+                    this.resuelveCelda(i+1, j);
+            }
+            if (i<this.matriz.getFilas() && (j+1)<this.matriz.getColumnas()){
+                if (this.matriz.get(i,j+1)<10)
+                    this.resuelveCelda(i, j+1);
+            }
+            if ((i+1)<this.matriz.getFilas() && (j+1)<this.matriz.getColumnas()){
+                if (this.matriz.get(i+1,j+1)<10)
+                    this.resuelveCelda(i+1, j+1);
+            }
+            if (i>0 && j>0) {
+                if (this.matriz.get(i-1,j-1)<10)
+                    this.resuelveCelda(i-1, j-1);
+            }
+        }
+        
     }
 
     cambiaClase(i,j){
@@ -253,27 +262,6 @@ class Juego {
                 this.aciertos++;
                 // no hacer nada, ya está resuelta...
         }
-        if (this.matriz.get(i,j)==10 && !this.fin) {
-            console.log("Abriendo vacíos...");
-            if (i>0 && j>=0) {
-                this.abreNO(i-1, j);
-            } 
-            if (i>=0 && j>0) {
-                this.abreNO(i, j-1);
-            }
-            if (i>0 && j>0) {
-                this.abreNO(i-1, j-1);
-            }
-            if ((i+1)<this.matriz.getFilas() && j<this.matriz.getColumnas()){
-                this.abreSE(i+1, j);
-            }
-            if (i<this.matriz.getFilas() && (j+1)<this.matriz.getColumnas()){
-                this.abreSE(i, j+1);
-            }
-            if ((i+1)<this.matriz.getFilas() && (j+1)<this.matriz.getColumnas()){
-                this.abreSE(i+1, j+1);
-            }
-        }
     }
 
     disparo(caja) {
@@ -310,28 +298,6 @@ class Juego {
             mi_tabla.append(fila);
         }
         this.caja_tablero.append(mi_tabla);
-        /*
-        $("td.vacio").each(
-            function(){
-                $(this).on("click",        
-                function (event){
-                    console.log("Has disparado en: "+event.target.getAttribute('id'));
-                    disparo(event.target);
-                });
-            });*/
-        /*
-        let tedes = document.querySelectorAll('td');
-        tedes.forEach( (el) => {
-            el.addEventListener('click', this.disparo(el),true);
-        });
-        */
-       /*
-       $("td.vacio").each(
-        function(){
-            $(this).on("click",        
-            (el) => {
-                el.addEventListener('click', this.disparo(el),true)});
-        });*/
     }
 
 }

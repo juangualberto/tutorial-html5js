@@ -30,6 +30,7 @@ class Marcadores{
             "tiempo": tiempo, // +this.caja_tiempo.html()
             "puntos": puntos // fórmula que calcula los puntos
         };
+        console.log(marcador);
         this.lista.push(marcador);
         this.lista.sort(function(a, b){return b.puntos-a.puntos});
         this.save();
@@ -66,7 +67,7 @@ class Marcadores{
      * Devuelve el código HTML de una tabla con los puntos
     */
     getTabla() {
-        let html="<table>";
+        let html="<table class='table marcadores'>";
         html+="<thead><th>#</th><th>Nombre</th><th>Puntos</th><th>Tiempo</th></thead>";
         html+="<tbody>";
         // Pintamos sólo las 20 puntuaciones más altas

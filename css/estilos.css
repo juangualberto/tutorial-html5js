@@ -213,3 +213,11 @@ div.contenedor {
   margin: 0px auto;
   float: none;
 }
+
+table.marcadores {
+  background-color: white;
+}
+
+.fondoBlanco {
+  background-color: white;
+}

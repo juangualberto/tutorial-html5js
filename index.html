@@ -67,7 +67,15 @@
         </div>
         <div class="container">       
             <div id="panel_inicio" class="panel">
-                <p>Inicio</p>
+                <div class="jumbotron fondoBlanco">
+                    <h1 class="display-4">Buscaminas</h1>
+                    <p class="lead">Tutorial de introducción a HTML5, CSS3 y al pensamiento computacional con JavaScript.</p>
+                    <hr class="my-4">
+                    <p>Este juego es el resultado final de seguir el curso cuyos materiales, libro en PDF, página Web y vídeos se pueden encontrar pulsando en el botón de debajo.</p>
+                    <p class="lead">
+                      <a class="btn btn-secondary" href="https://github.com/juangualberto/tutorial-html5js" role="button">Aprender más...</a>
+                    </p>
+                </div>
             </div>
             <div id="panel_partida_facil" class="panel">
                 <p>Partida Fácil</p>
@@ -79,10 +87,16 @@
                 <p>Partida Dificil</p>
             </div>
             <div id="panel_ayuda" class="panel">
-                <p>Ayuda</p>
+                <p> Destapa casillas sin pisar una mina...</p>
             </div>
             <div id="panel_licencia" class="panel">
-                <p>Licencia</p>
+                <div> 
+                    <p>Este curso ha sido realizado para ayudar a nuestros alumnos durante los meses de confinamiento por la pandemia del COVID-19. Primavera del 2020.</p>
+                    <p><a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="nofollow"><img src="https://camo.githubusercontent.com/e170e276291254896665fa8f612b99fe5b7dd005/68747470733a2f2f692e6372656174697665636f6d6d6f6e732e6f72672f6c2f62792d73612f342e302f38387833312e706e67" alt="Licencia de Creative Commons" data-canonical-src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" style="max-width:100%;"></a><br>
+                    Este obra está bajo una <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="nofollow">licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional</a>.</p>
+                    <p>Para seguir el curso te animamos a visitar este <a href="https://www.youtube.com/user/juanguedu" rel="nofollow">canal de Youtube</a> donde podrás de seguir estas explicaciones.</p>
+                    <p>Si estás viendo una copia en formato PDF o ePub del libro, recuerda que siempre puedes acceder a la <a href="https://github.com/juangualberto/tutorial-html5js">última versión en el repositorio de Github</a>.</p>
+                </div>
             </div>
             <div id="panel_puntuaciones" class="panel">
                 <p>Puntuaciones</p>
@@ -101,13 +115,13 @@
             </div>
             <div class="modal-body">
             <p>Introduce tu nombre:</p>
-            <input type="text" placeholder="Escribe tu nombre" id="nomGanador"/>
+            <input type="text" placeholder="Escribe tu nombre" id="nombreJugador"/>
             <p>Tiempo</p>
-            <span id="tiempo_jug"/>
+            <span id="puntosJugador"/>
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal" id="inGanador">Aceptar</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="salvarPuntos">Aceptar</button>
             </div>
         </div>
     
@@ -128,7 +142,7 @@
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal" id="inGanador">Aceptar</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Aceptar</button>
             </div>
         </div>
     
