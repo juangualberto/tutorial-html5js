@@ -104,7 +104,7 @@ class Juego {
         let filas =  this.filas;
         let columnas = this.columnas;
         let tiempo = (+this.caja_tiempo.html());
-        let puntos = Math.floor( (this.minas*this.minas)/(filas*columnas*tiempo)*100000);
+        let puntos = Math.floor( (filas*columnas)/(this.minas*this.minas)*100000/tiempo);
         this.marcadores.load();
         this.marcadores.addMarcador($('#nombreJugador').val(), 
             puntos, tiempo, filas, 
