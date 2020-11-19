@@ -74,6 +74,34 @@ Esto se vería un poco diferente al ejemplo anterior en un navegador (intenta pe
 
 ### Añadiendo estilos desde un archivo externo
 
+Para añadir estilos desde un fichero externo, usamos la etiqueta **link** de este modo:
+
+```html
+    <link rel="stylesheet" href="css/style.css" >
+```
+
+Donde el archivo *style.css* que está en la carpeta *css* contiene la hoja de estilo a cargar:
+
+```css
+body {
+    background-color: lightblue;
+}
+
+h1,h2,h3 {
+    color: white;
+}
+
+p {
+    font-family: verdana;
+    font-size: 15px;
+}
+
+li {
+    font-family: sans-serif;
+    font-size: 13px;
+}
+```
+
 ## El modelo de cajas
 
 Como ya te explicamos el contenido de una página Web lo vamos guardando entre etiquetas. Estas etiquetas contienen el texto, es decir con contenedores o cajas de texto. Para dar el aspecto que tienen a las páginas Web (y que no sean sólamente texto), les damos estilos, es lo que se llama CSS (Cascade Style Sheets - hojas de estilo en cascada).
